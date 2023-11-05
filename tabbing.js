@@ -1,3 +1,5 @@
+// H. Tretuens 578003 K.G. Smith 577999 J.R. Joubert 578085 Z. Luo 600287
+// Start of tabbing script
 const topics = {
     Significance:{
         video: "Video Significance URL",
