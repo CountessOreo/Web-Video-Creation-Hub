@@ -22,12 +22,11 @@ submit.addEventListener('submit', (i)=>{
     </h2>
     `
     Email.send({
-        SecureToken : "dc3e1a45-19f0-4e0a-b451-80644edd07d8",
+        SecureToken : "1df566a6-7fd8-4955-b8f0-94fa503caf40",
         To : 'rjjoubert007@gmail.com',
-        From : "jonathan@wpr181.fibco.co.za",
+        From : "help@thebusinessconsultants.fibco.co.za",
         Subject : "Subject: " + Subject.value,
         Body : emailformatting
-    }).then(window.open('./EmailSent.html'));
-
+    }).then(window.open('index.html'));
 });
     
