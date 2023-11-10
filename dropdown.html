@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 50px;
+    }
+    select {
+      padding: 10px;
+      font-size: 16px;
+    }
+    #info-container {
+      margin-top: 20px;
+    }
+  </style>
+  <script>
+    function showInfo() {
+      var selectedValue = document.getElementById("topicDropdown").value;
+
+      var topicInfo = {
+        "": "Select a topic to view information.",
+        "topic1": "This is information about Topic 1.",
+        "topic2": "This is information about Topic 2.",
+        "topic3": "This is information about Topic 3."
+      
+      };
+
+    
+      document.getElementById("info-container").innerHTML = topicInfo[selectedValue];
+    }
+  </script>
+</head>
+<body>
+
+<label for="topicDropdown">Select a Topic:</label>
+<select id="topicDropdown" onchange="showInfo()">
+  <option value="" disabled selected>Select a Topic</option>
+  <option value="topic1">Topic 1</option>
+  <option value="topic2">Topic 2</option>
+  <option value="topic3">Topic 3</option>
+
+</select>
+
+
+<div id="info-container">Select a topic to view information.</div>
+
+</body>
+</html>
