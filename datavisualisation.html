@@ -13,13 +13,21 @@
 
 <body>
     <header>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
         <h1>INF</h1>
-        <nav>
+        <nav class="sidebar">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="datavisualisation.html">Data Visualisation</a></li>
                 <li><a href="qualityofinformation.html">Quality of Information</a></li>
                 <li><a href="dataethics.html">Data Ethics</a></li>
+                <li><a href="informationsystems.html">Information Systems</a></li>
+                <li><a href="integration.html">Information Systems integration</a></li>
+                <li><a href="customizing.html">Customizing Information Systems</a></li>
                 <li><a href="bibliography.html">Bibliography</a></li>
                 <li><a href="contact.html" target="_blank">Contact</a></li>
             </ul>
@@ -44,25 +52,25 @@ It is essential for converting unstructured data into insightful understandings 
         video: "Video Significance URL",
         text: "Understanding Complex Data: <br> By streamlining complex datasets, data visualization helps users better understand the patterns, trends, and outliers that exist in the data. <br><br>Collaboration and Communication: <br>  By presenting data in a way that is universally understood, visual representations improve communication within teams. Collaboration between departments and stakeholders is facilitated by it.<br><br> Rapid Decision-Making: <br>Decision-makers can respond quickly to shifting market conditions, consumer preferences, and internal procedures thanks to the instant insights provided by visualizations.<br><br> Identification of Trends and Patterns:<br> Data visualization tools enable users to identify trends, patterns, and correlations within datasets that might be difficult to discern through raw data alone. By visualizing data, analysts can quickly spot emerging trends, allowing businesses to adapt and capitalize on new opportunities. <br><br>Improved Data Analysis:<br> Visualization tools often come with powerful analytical capabilities. Users can apply various statistical methods, filters, and algorithms to the visualized data to gain deeper insights. This enhanced analysis helps in understanding customer behavior, market dynamics, and business performance more effectively. <br> <br>Storytelling with Data: <br>Data visualization allows professionals to tell a compelling story with data. By creating interactive and engaging visualizations, complex narratives can be simplified and conveyed to stakeholders. Visualizations can evoke emotions and help people connect with the data, making the information more memorable and impactful. <br><br>Forecasting and Predictive Analysis: <br>Data visualization, coupled with advanced analytics techniques, enables businesses to build predictive models. These models use historical data to forecast future trends, demand, and outcomes. This predictive analysis is valuable for strategic planning and optimizing resources.<br><br>Real-time Monitoring: <br>With the advent of real-time data visualization tools, businesses can monitor their operations and performance metrics in real-time. This capability is particularly useful in fields like finance, healthcare, and online services, where immediate responses to changing conditions are necessary.<br><br>Enhanced User Engagement: <br>In fields like digital marketing and social media, visually appealing charts and graphs are essential for engaging audiences. Interactive dashboards and visual reports not only convey information effectively but also enhance user engagement, leading to better customer experiences.",
         test: "Test Significance Questions",
-        answers: "Answers Significance Content",
+       
     },
     Benefits: {
         video: "Video Benefits URL",
         text: "Text Benefits Content",
         test: "Test Benefits Questions",
-        answers: "Answers Benefits Content",
+  
     },
     Impact: {
         video: "Video Impact URL",
         text: "Text Impact Content",
         test: "Test Impact Questions",
-        answers: "Answers Impact Content",
+   
     },
     Importance: {
         video: "Video Importance URL",
         text: "Text Importance Content",
         test: "Test Importance Questions",
-        answers: "Answers Importance Content",
+    
     },
 };
 
@@ -91,14 +99,74 @@ function renderTopicInfo(topicInfo) {
         <p>${topicInfo.text}</p>
         <h2>Test:</h2>
         <p>${topicInfo.test}</p>
-        <h2>Answers:</h2>
-        <p>${topicInfo.answers}</p>
+
     `;
     contentDiv.innerHTML = contentHTML;
 }
 
         </script>
+   <style>
+    .card{
+        width: 25rem;
+        height: 200px;
+        margin: auto;
+    }
 
+    .cardbody{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19); 
+    }
+
+    .front, .back {
+        background-color: #ffffff;
+        border:solid 3px turquoise;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+
+    .front p, .back p {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: large;
+        margin: 0;
+    }
+
+    .back{
+        transform: rotateY(180deg);
+    }
+
+    .card:hover .cardbody{
+        transform: rotateY(180deg);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="cardbody">
+            <div class="front">
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="back">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function toggleMenu() {
+        document.querySelector('.sidebar').classList.toggle('active');
+    }
+</script>
 </body>
 
 </html>

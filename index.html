@@ -13,19 +13,27 @@
 
 <body>
     <header>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
         <h1>INF</h1>
-        <nav>
+        <nav class="sidebar">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="datavisualisation.html">Data Visualisation</a></li>
                 <li><a href="qualityofinformation.html">Quality of Information</a></li>
                 <li><a href="dataethics.html">Data Ethics</a></li>
+                <li><a href="informationsystems.html">Information Systems</a></li>
+                <li><a href="integration.html">Information Systems integration</a></li>
+                <li><a href="customizing.html">Customizing Information Systems</a></li>
                 <li><a href="bibliography.html">Bibliography</a></li>
                 <li><a href="contact.html" target="_blank">Contact</a></li>
             </ul>
         </nav>
     </header>
- <p>
+    <div id="content">
     INTRODUCTON 
 
  
@@ -67,9 +75,10 @@ Defining a Digital Information Literacy Toolkit
  
 
 A digital information literacy toolkit is a repository of digital information which enhances literacy in computer users.  Examples include Google Workspace which is a suite of office productivity applications like Google Docs, Google Drive, Gmail etc, and MSOffice encompassing, Word, Excel, PowerPoint, and Access.  
-
- 
- </p>
+</div>
+<script>
+    function toggleMenu() {
+        document.querySelector('.sidebar').classList.toggle('active');
+    }
+</script>
 </body>
-
-</html>

@@ -4,25 +4,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Quality of Information</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
         <h1>INF</h1>
-        <nav>
+        <nav class="sidebar">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="datavisualisation.html">Data Visualisation</a></li>
                 <li><a href="qualityofinformation.html">Quality of Information</a></li>
                 <li><a href="dataethics.html">Data Ethics</a></li>
+                <li><a href="informationsystems.html">Information Systems</a></li>
+                <li><a href="integration.html">Information Systems integration</a></li>
+                <li><a href="customizing.html">Customizing Information Systems</a></li>
                 <li><a href="bibliography.html">Bibliography</a></li>
                 <li><a href="contact.html" target="_blank">Contact</a></li>
             </ul>
         </nav>
     </header>
+ <p>
+
+    <div class="container">
+        <h1>Quality of Information</h1>
+        <p>
+            
+        </p>
+    
+        <select id="topicsDropdown"></select>
+        <div id="content"></div>
+    </div>
+    <script>
+       const topics = {
+    Accuracy:{
+        video: "Video Accuracy URL",
+        text: "dsAccuracydhauifbfAccuracyjknfjs",
+        test: "Test Accuracy Questions",
+    },
+    Precision: {
+        video: "Video Precision URL",
+        text: "Text Precision Content",
+        test: "Test Precision Questions",
+    },
+    Completeness: {
+        video: "Video Completeness URL",
+        text: "Text Completeness Content",
+        test: "Test Completeness Questions",
+    },
+    Consistency: {
+        video: "Video Consistency URL",
+        text: "Text Consistency Content",
+        test: "Test Consistency Questions",
+    },
+    Currency: {
+        video: "Video Currency URL",
+        text: "Text Currency Content",
+        test: "Test Currency Questions",
+    },
+    Uniqueness: {
+        video: "Video Uniqueness URL",
+        text: "Text Uniqueness Content",
+        test: "Test Uniqueness Questions",
+    },
+};
+
+const topicsDropdown = document.getElementById("topicsDropdown");
+const contentDiv = document.getElementById("content");
+
+
+for (const topic in topics) {
+const option = document.createElement("option");
+option.value = topic;
+option.textContent = topic;
+topicsDropdown.appendChild(option);
+}
+
+topicsDropdown.addEventListener("change", function () {
+const selectedTopic = topicsDropdown.value;
+const selectedTopicInfo = topics[selectedTopic];
+renderTopicInfo(selectedTopicInfo);
+});
+
+function renderTopicInfo(topicInfo) {
+const contentHTML = `
+    <h2>Video:</h2>
+    <p>${topicInfo.video}</p>
+    <h2>Text:</h2>
+    <p>${topicInfo.text}</p>
+    <h2>Test:</h2>
+    <p>${topicInfo.test}</p>
+`;
+contentDiv.innerHTML = contentHTML;
+}
+
+    </script>
  
+ </p>
+ <style>
+    .card{
+        width: 25rem;
+        height: 200px;
+        margin: auto;
+    }
+
+    .cardbody{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19); 
+    }
+
+    .front, .back {
+        background-color: #ffffff;
+        border:solid 3px turquoise;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+
+    .front p, .back p {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: large;
+        margin: 0;
+    }
+
+    .back{
+        transform: rotateY(180deg);
+    }
+
+    .card:hover .cardbody{
+        transform: rotateY(180deg);
+    }
+    </style>
+
+<body>
+    <div class="card">
+        <div class="cardbody">
+            <div class="front">
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="back">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function toggleMenu() {
+        document.querySelector('.sidebar').classList.toggle('active');
+    }
+</script>
 </body>
 
 </html>

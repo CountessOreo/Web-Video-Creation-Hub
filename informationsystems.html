@@ -4,19 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>AI in Information Systems</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
         <h1>INF</h1>
-        <nav>
+        <nav class="sidebar">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="datavisualisation.html">Data Visualisation</a></li>
                 <li><a href="qualityofinformation.html">Quality of Information</a></li>
                 <li><a href="dataethics.html">Data Ethics</a></li>
+                <li><a href="informationsystems.html">Information Systems</a></li>
+                <li><a href="integration.html">Information Systems integration</a></li>
+                <li><a href="customizing.html">Customizing Information Systems</a></li>
                 <li><a href="bibliography.html">Bibliography</a></li>
                 <li><a href="contact.html" target="_blank">Contact</a></li>
             </ul>
@@ -25,7 +33,7 @@
  <p>
 
     <div class="container">
-        <h1>Information Systems/h1>
+        <h1>AI in Information Systems</h1>
         <p>
             
         </p>
@@ -37,27 +45,33 @@
        const topics = {
 AI:{
     video: "Video AI URL",
-    text: "dsaidhauifbfaijknfjs",
+    text: "Text AI Content",
     test: "Test AI Questions",
-    answers: "Answers AI Content",
+
 },
-Benefits: {
-    video: "Video Benefits URL",
-    text: "Text Benefits Content",
-    test: "Test Benefits Questions",
-    answers: "Answers Benefits Content",
+Trends: {
+    video: "Video Trends URL",
+    text: "Text Trends Content",
+    test: "Test Trends Questions",
+
 },
-Impact: {
-    video: "Video Impact URL",
-    text: "Text Impact Content",
-    test: "Test Impact Questions",
-    answers: "Answers Impact Content",
+Pitfalls: {
+    video: "Video Pitfalls URL",
+    text: "Text Pitfalls Content",
+    test: "Test Pitfalls Questions",
+
 },
-Importance: {
-    video: "Video Importance URL",
-    text: "Text Importance Content",
-    test: "Test Importance Questions",
-    answers: "Answers Importance Content",
+Limitations: {
+    video: "Video Limitations URL",
+    text: "Text Limitations Content",
+    test: "Test Limitations Questions",
+
+},
+Ethical: {
+    video: "Video Ethical Concerns URL",
+    text: "Text Ethical Concerns Content",
+    test: "Test Ethical Concerns Questions",
+
 },
 };
 
@@ -86,8 +100,6 @@ const contentHTML = `
     <p>${topicInfo.text}</p>
     <h2>Test:</h2>
     <p>${topicInfo.test}</p>
-    <h2>Answers:</h2>
-    <p>${topicInfo.answers}</p>
 `;
 contentDiv.innerHTML = contentHTML;
 }
@@ -95,6 +107,67 @@ contentDiv.innerHTML = contentHTML;
     </script>
  
  </p>
+ <style>
+    .card{
+        width: 25rem;
+        height: 200px;
+        margin: auto;
+    }
+
+    .cardbody{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19); 
+    }
+
+    .front, .back {
+        background-color: #ffffff;
+        border:solid 3px turquoise;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+
+    .front p, .back p {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: large;
+        margin: 0;
+    }
+
+    .back{
+        transform: rotateY(180deg);
+    }
+
+    .card:hover .cardbody{
+        transform: rotateY(180deg);
+    }
+    </style>
+
+<body>
+    <div class="card">
+        <div class="cardbody">
+            <div class="front">
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="back">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function toggleMenu() {
+        document.querySelector('.sidebar').classList.toggle('active');
+    }
+</script>
 </body>
 
 </html>
