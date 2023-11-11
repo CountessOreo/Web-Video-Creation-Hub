@@ -29,4 +29,26 @@ submit.addEventListener('submit', (i)=>{
         Body : emailformatting
     }).then(window.open('index.html'));
 });
+
+   function toggleMenu() {
+    var sidebar = document.querySelector('.sidebar');
+    var content = document.querySelector('.content');
+
+    sidebar.classList.toggle('active');
+    content.classList.toggle('active');
+  }
+
+  function toggleContent(topicId) {
+    var introduction = document.getElementById('introduction');
+    introduction.style.display = 'none';
+
+    var allSubtopics = document.querySelectorAll('.subtopic');
+    allSubtopics.forEach(function(subtopic) {
+      subtopic.style.display = 'none';
+    });
+
+    var subtopic = document.getElementById(topicId);
+    subtopic.style.display = (subtopic.style.display === "none") ? "block" : "none";
+  }
+
     

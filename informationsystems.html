@@ -87,7 +87,7 @@ nav ul li a:hover::after {
 .menu-toggle .bar {
     height: 3px;
     width: 25px;
-    background-color: #fff;
+    background-color: #000000;
     margin: 6px 0;
     transition: 0.4s;
 }
@@ -249,6 +249,45 @@ nav ul li a:hover::after {
     .marginfix{
         margin-left: 2%;
     }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #e0e0e0;
+        width: 70%; 
+        margin-left: 15%;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        cursor: pointer;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+        width: 30%; 
+    }
+
+    .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #333;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        z-index: 1;
+    }
+    
     </style>
 
 </head>
@@ -283,6 +322,10 @@ nav ul li a:hover::after {
             <div class="topic" onclick="toggleContent('subtopic1')">Overview</div>
         </div>
         
+        <div class="introduction" id="introduction">
+            <p>The integration of Artificial Intelligence (AI) into information systems represents a transformative evolution in how businesses leverage technology to enhance decision-making, automate processes, and derive valuable insights from data. AI integration involves embedding machine learning algorithms, natural language processing, and other AI capabilities into existing information systems to make them more intelligent, adaptive, and capable of performing complex tasks. This integration holds the potential to revolutionize various aspects of business operations, from customer service to data analysis and strategic planning.</p>
+        </div>
+
         <div class="subtopic" id="subtopic1">
             <h1>Video Presentation</h1>
             <iframe width="880" height="495" src="https://www.youtube.com/embed/ZUt8RLWEm8o?si=_FY9yOH2H_CzcovU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
