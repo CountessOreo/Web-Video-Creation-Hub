@@ -185,6 +185,13 @@ nav ul li a:hover::after {
       border-top: 1px solid #ddd;
       width: 100%;
     }
+
+    .introduction {
+      padding: 10px;
+      background-color: #ffffff;
+      margin: 5px;
+    }
+
     </style>
 
   
@@ -214,6 +221,10 @@ nav ul li a:hover::after {
    
         <div class="topics-container">
             <div class="topic" onclick="toggleContent('mainTopic')">Quality of Information</div>
+          </div>
+       
+          <div class="introduction" id="introduction">
+            <p>This is the introduction</p>
           </div>
           
           <div class="subtopic" id="mainTopic">
@@ -346,10 +357,10 @@ nav ul li a:hover::after {
                  <div class="card">
                      <div class="cardbody">
                          <div class="front">
-                             <p>Lorem ipsum dolor sit amet.</p>
+                             <p>Q. What is accuracy? </p>
                          </div>
                          <div class="back">
-                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                             <p>A. It is the evaluation of how close a measurement is to a true value. </p>
                          </div>
                      </div>
                  </div>
@@ -429,14 +440,97 @@ nav ul li a:hover::after {
                   <div class="card">
                       <div class="cardbody">
                           <div class="front">
-                              <p>Lorem ipsum dolor sit amet.</p>
+                              <p>Q. Accuracy effects the decision-making process. True or false? </p>
                           </div>
                           <div class="back">
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                              <p>A. True, having accurate data is vital for good decision-making. If data is inaccurate or filled with errors this may lead to bad decisions that could negatively affect businesses and lead to bad investments.</p>
                           </div>
                       </div>
                   </div>
               </body>
+
+              <script>
+                function toggleMenu() {
+                 var sidebar = document.querySelector('.sidebar');
+                 var content = document.querySelector('.content');
+             
+                 sidebar.classList.toggle('active');
+                 content.classList.toggle('active');
+               }
+             
+               function toggleContent(topicId) {
+                 var allSubtopics = document.querySelectorAll('.subtopic');
+                 allSubtopics.forEach(function(subtopic) {
+                   subtopic.style.display = 'none';
+                 });
+             
+                 var subtopic = document.getElementById(topicId);
+                 subtopic.style.display = (subtopic.style.display === "none") ? "block" : "none";
+               }
+             </script>
+             
+             <head>
+                 <meta charset="UTF-8">
+                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                 <title>Document</title>
+                 <style>
+                 .card{
+                     width: 25rem;
+                     height: 200px;
+                     margin: auto;
+                 }
+             
+                 .cardbody{
+                     position: relative;
+                     width: 100%;
+                     height: 100%;
+                     text-align: center;
+                     transition: transform 0.6s;
+                     transform-style: preserve-3d;
+                     box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19); 
+                 }
+             
+                 .front, .back {
+                     background-color: #ffffff;
+                     border:solid 3px turquoise;
+                     position: absolute;
+                     width: 100%;
+                     height: 100%;
+                     backface-visibility: hidden;
+                     -webkit-backface-visibility: hidden;
+                 }
+             
+                 .front p, .back p {
+                     position: relative;
+                     top: 50%;
+                     transform: translateY(-50%);
+                     font-size: large;
+                     margin: 0;
+                 }
+             
+                 .back{
+                     transform: rotateY(180deg);
+                     transition: 0.5s;
+                 }
+             
+                 .card:hover .cardbody{
+                     transform: rotateY(180deg);
+                 }
+                 </style>
+             </head>
+             
+             <body>
+                 <div class="card">
+                     <div class="cardbody">
+                         <div class="front">
+                             <p>Q. How does pinpointing issues and fixing smaller areas help improve data accuracy?</p>
+                         </div>
+                         <div class="back">
+                             <p>A. Dealing with focused sectors of data where issues arise may solve additional issues in the rest of the system, therefore finding the origins of inaccuracies will save time and allow for other issues to be solved later as the necessity arises. </p>
+                         </div>
+                     </div>
+                 </div>
+             </body>
 
           </div>
           
@@ -543,10 +637,10 @@ nav ul li a:hover::after {
                  <div class="card">
                      <div class="cardbody">
                          <div class="front">
-                             <p>Lorem ipsum dolor sit amet.</p>
+                             <p>Q. What is precision? </p>
                          </div>
                          <div class="back">
-                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                             <p>A. How close the difference is between repeated measurements. </p>
                          </div>
                      </div>
                  </div>
@@ -626,14 +720,97 @@ nav ul li a:hover::after {
                   <div class="card">
                       <div class="cardbody">
                           <div class="front">
-                              <p>Lorem ipsum dolor sit amet.</p>
+                              <p>Q. How can you measure precision? </p>
                           </div>
                           <div class="back">
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                              <p>A. Precision is measured by finding the range or difference between the largest measured value and the lowest measured value. </p>
                           </div>
                       </div>
                   </div>
               </body>
+
+              <script>
+                function toggleMenu() {
+                 var sidebar = document.querySelector('.sidebar');
+                 var content = document.querySelector('.content');
+             
+                 sidebar.classList.toggle('active');
+                 content.classList.toggle('active');
+               }
+             
+               function toggleContent(topicId) {
+                 var allSubtopics = document.querySelectorAll('.subtopic');
+                 allSubtopics.forEach(function(subtopic) {
+                   subtopic.style.display = 'none';
+                 });
+             
+                 var subtopic = document.getElementById(topicId);
+                 subtopic.style.display = (subtopic.style.display === "none") ? "block" : "none";
+               }
+             </script>
+             
+             <head>
+                 <meta charset="UTF-8">
+                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                 <title>Document</title>
+                 <style>
+                 .card{
+                     width: 25rem;
+                     height: 200px;
+                     margin: auto;
+                 }
+             
+                 .cardbody{
+                     position: relative;
+                     width: 100%;
+                     height: 100%;
+                     text-align: center;
+                     transition: transform 0.6s;
+                     transform-style: preserve-3d;
+                     box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19); 
+                 }
+             
+                 .front, .back {
+                     background-color: #ffffff;
+                     border:solid 3px turquoise;
+                     position: absolute;
+                     width: 100%;
+                     height: 100%;
+                     backface-visibility: hidden;
+                     -webkit-backface-visibility: hidden;
+                 }
+             
+                 .front p, .back p {
+                     position: relative;
+                     top: 50%;
+                     transform: translateY(-50%);
+                     font-size: large;
+                     margin: 0;
+                 }
+             
+                 .back{
+                     transform: rotateY(180deg);
+                     transition: 0.5s;
+                 }
+             
+                 .card:hover .cardbody{
+                     transform: rotateY(180deg);
+                 }
+                 </style>
+             </head>
+             
+             <body>
+                 <div class="card">
+                     <div class="cardbody">
+                         <div class="front">
+                             <p>Q. Precision helps set a business apart from competitors. True or false?  </p>
+                         </div>
+                         <div class="back">
+                             <p>A. True Having precise marketing and advertising will help effectively communicate with the target market far better than competing businesses and retain or receive new customers.  </p>
+                         </div>
+                     </div>
+                 </div>
+             </body>
 
           </div>
           
@@ -745,10 +922,10 @@ nav ul li a:hover::after {
                  <div class="card">
                      <div class="cardbody">
                          <div class="front">
-                             <p>Lorem ipsum dolor sit amet.</p>
+                             <p>Q. What does it mean to have complete data? </p>
                          </div>
                          <div class="back">
-                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                             <p>A. Having a required amount of essential information in order to make informed decisions. </p>
                          </div>
                      </div>
                  </div>
@@ -828,14 +1005,97 @@ nav ul li a:hover::after {
                   <div class="card">
                       <div class="cardbody">
                           <div class="front">
-                              <p>Lorem ipsum dolor sit amet.</p>
+                              <p>Q. How does identifying essential data improve completeness? </p>
                           </div>
                           <div class="back">
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                              <p>A. Identify what information is relevant and required to make informed decisions and what information if not acquired could jeopardise the data’s usefulness and trustworthiness. </p>
                           </div>
                       </div>
                   </div>
               </body>
+
+              <script>
+                function toggleMenu() {
+                 var sidebar = document.querySelector('.sidebar');
+                 var content = document.querySelector('.content');
+             
+                 sidebar.classList.toggle('active');
+                 content.classList.toggle('active');
+               }
+             
+               function toggleContent(topicId) {
+                 var allSubtopics = document.querySelectorAll('.subtopic');
+                 allSubtopics.forEach(function(subtopic) {
+                   subtopic.style.display = 'none';
+                 });
+             
+                 var subtopic = document.getElementById(topicId);
+                 subtopic.style.display = (subtopic.style.display === "none") ? "block" : "none";
+               }
+             </script>
+             
+             <head>
+                 <meta charset="UTF-8">
+                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                 <title>Document</title>
+                 <style>
+                 .card{
+                     width: 25rem;
+                     height: 200px;
+                     margin: auto;
+                 }
+             
+                 .cardbody{
+                     position: relative;
+                     width: 100%;
+                     height: 100%;
+                     text-align: center;
+                     transition: transform 0.6s;
+                     transform-style: preserve-3d;
+                     box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19); 
+                 }
+             
+                 .front, .back {
+                     background-color: #ffffff;
+                     border:solid 3px turquoise;
+                     position: absolute;
+                     width: 100%;
+                     height: 100%;
+                     backface-visibility: hidden;
+                     -webkit-backface-visibility: hidden;
+                 }
+             
+                 .front p, .back p {
+                     position: relative;
+                     top: 50%;
+                     transform: translateY(-50%);
+                     font-size: large;
+                     margin: 0;
+                 }
+             
+                 .back{
+                     transform: rotateY(180deg);
+                     transition: 0.5s;
+                 }
+             
+                 .card:hover .cardbody{
+                     transform: rotateY(180deg);
+                 }
+                 </style>
+             </head>
+             
+             <body>
+                 <div class="card">
+                     <div class="cardbody">
+                         <div class="front">
+                             <p>Q. True or false, inadequate data collection methods is a cause of incomplete data? </p>
+                         </div>
+                         <div class="back">
+                             <p>A. True, without standardised collection requirements data could be omitted or subpar by accident or on purpose as there is no defined guidance as to what data is required. </p>
+                         </div>
+                     </div>
+                 </div>
+             </body>
 
           </div>
 
@@ -952,10 +1212,10 @@ nav ul li a:hover::after {
                  <div class="card">
                      <div class="cardbody">
                          <div class="front">
-                             <p>Lorem ipsum dolor sit amet.</p>
+                             <p>Q. What does it mean to have consistent data? </p>
                          </div>
                          <div class="back">
-                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                             <p>A. When data is coherent, accurate, and uniform throughout a business system. </p>
                          </div>
                      </div>
                  </div>
@@ -1035,14 +1295,97 @@ nav ul li a:hover::after {
                   <div class="card">
                       <div class="cardbody">
                           <div class="front">
-                              <p>Lorem ipsum dolor sit amet.</p>
+                              <p>Q. Highly skilled and trained employees can cause data inconsistencies. True or false? </p>
                           </div>
                           <div class="back">
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                              <p>A. False, the lack of training and awareness when new employees are inexperienced in capturing data could lead to inconsistencies and errors. A lack of training will affect accuracy and result in poor data quality. </p>
                           </div>
                       </div>
                   </div>
               </body>
+
+              <script>
+                function toggleMenu() {
+                 var sidebar = document.querySelector('.sidebar');
+                 var content = document.querySelector('.content');
+             
+                 sidebar.classList.toggle('active');
+                 content.classList.toggle('active');
+               }
+             
+               function toggleContent(topicId) {
+                 var allSubtopics = document.querySelectorAll('.subtopic');
+                 allSubtopics.forEach(function(subtopic) {
+                   subtopic.style.display = 'none';
+                 });
+             
+                 var subtopic = document.getElementById(topicId);
+                 subtopic.style.display = (subtopic.style.display === "none") ? "block" : "none";
+               }
+             </script>
+             
+             <head>
+                 <meta charset="UTF-8">
+                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                 <title>Document</title>
+                 <style>
+                 .card{
+                     width: 25rem;
+                     height: 200px;
+                     margin: auto;
+                 }
+             
+                 .cardbody{
+                     position: relative;
+                     width: 100%;
+                     height: 100%;
+                     text-align: center;
+                     transition: transform 0.6s;
+                     transform-style: preserve-3d;
+                     box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19); 
+                 }
+             
+                 .front, .back {
+                     background-color: #ffffff;
+                     border:solid 3px turquoise;
+                     position: absolute;
+                     width: 100%;
+                     height: 100%;
+                     backface-visibility: hidden;
+                     -webkit-backface-visibility: hidden;
+                 }
+             
+                 .front p, .back p {
+                     position: relative;
+                     top: 50%;
+                     transform: translateY(-50%);
+                     font-size: large;
+                     margin: 0;
+                 }
+             
+                 .back{
+                     transform: rotateY(180deg);
+                     transition: 0.5s;
+                 }
+             
+                 .card:hover .cardbody{
+                     transform: rotateY(180deg);
+                 }
+                 </style>
+             </head>
+             
+             <body>
+                 <div class="card">
+                     <div class="cardbody">
+                         <div class="front">
+                             <p>Q. Cross-validation is a method to improve data consistency. True or false? </p>
+                         </div>
+                         <div class="back">
+                             <p>A. True, performing cross-validation of data can assist in finding discrepancies through the migration and integration processes that will assist in keeping data consistent throughout its use.  </p>
+                         </div>
+                     </div>
+                 </div>
+             </body>
 
           </div>
           
@@ -1158,10 +1501,10 @@ nav ul li a:hover::after {
                  <div class="card">
                      <div class="cardbody">
                          <div class="front">
-                             <p>Lorem ipsum dolor sit amet.</p>
+                             <p>Q. What is data currency? </p>
                          </div>
                          <div class="back">
-                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                             <p>A. When data is constantly updated and reflects relevant information to remain valuable enough for data-driven decisions.  </p>
                          </div>
                      </div>
                  </div>
@@ -1241,14 +1584,97 @@ nav ul li a:hover::after {
                   <div class="card">
                       <div class="cardbody">
                           <div class="front">
-                              <p>Lorem ipsum dolor sit amet.</p>
+                              <p>Q. A benefit of data currency is that it provides real-time monitoring. True or false? </p>
                           </div>
                           <div class="back">
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                              <p>A. True, using real-time data monitoring a business can proactively make decisions and interventions as needed to avoid disaster or take opportunities as they arise. </p>
                           </div>
                       </div>
                   </div>
               </body>
+
+              <script>
+                function toggleMenu() {
+                 var sidebar = document.querySelector('.sidebar');
+                 var content = document.querySelector('.content');
+             
+                 sidebar.classList.toggle('active');
+                 content.classList.toggle('active');
+               }
+             
+               function toggleContent(topicId) {
+                 var allSubtopics = document.querySelectorAll('.subtopic');
+                 allSubtopics.forEach(function(subtopic) {
+                   subtopic.style.display = 'none';
+                 });
+             
+                 var subtopic = document.getElementById(topicId);
+                 subtopic.style.display = (subtopic.style.display === "none") ? "block" : "none";
+               }
+             </script>
+             
+             <head>
+                 <meta charset="UTF-8">
+                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                 <title>Document</title>
+                 <style>
+                 .card{
+                     width: 25rem;
+                     height: 200px;
+                     margin: auto;
+                 }
+             
+                 .cardbody{
+                     position: relative;
+                     width: 100%;
+                     height: 100%;
+                     text-align: center;
+                     transition: transform 0.6s;
+                     transform-style: preserve-3d;
+                     box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19); 
+                 }
+             
+                 .front, .back {
+                     background-color: #ffffff;
+                     border:solid 3px turquoise;
+                     position: absolute;
+                     width: 100%;
+                     height: 100%;
+                     backface-visibility: hidden;
+                     -webkit-backface-visibility: hidden;
+                 }
+             
+                 .front p, .back p {
+                     position: relative;
+                     top: 50%;
+                     transform: translateY(-50%);
+                     font-size: large;
+                     margin: 0;
+                 }
+             
+                 .back{
+                     transform: rotateY(180deg);
+                     transition: 0.5s;
+                 }
+             
+                 .card:hover .cardbody{
+                     transform: rotateY(180deg);
+                 }
+                 </style>
+             </head>
+             
+             <body>
+                 <div class="card">
+                     <div class="cardbody">
+                         <div class="front">
+                             <p>Q. Does outdated data affect a business performance?  </p>
+                         </div>
+                         <div class="back">
+                             <p>A. Yes, Systems may perform slower due to a backlog of outdated data that needs to go through verification steps, get approval from management and risk assessments, and essentially waste time as it may be discarded.  </p>
+                         </div>
+                     </div>
+                 </div>
+             </body>
 
           </div>
 
@@ -1353,10 +1779,10 @@ nav ul li a:hover::after {
                  <div class="card">
                      <div class="cardbody">
                          <div class="front">
-                             <p>Lorem ipsum dolor sit amet.</p>
+                             <p>Q. What does it mean to have unique data? </p>
                          </div>
                          <div class="back">
-                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                             <p>A. The act of a dataset appearing only once and therefore no duplications exist. If any data instances have multiple data entries it is not unique. </p>
                          </div>
                      </div>
                  </div>
@@ -1436,14 +1862,97 @@ nav ul li a:hover::after {
                   <div class="card">
                       <div class="cardbody">
                           <div class="front">
-                              <p>Lorem ipsum dolor sit amet.</p>
+                              <p>Q. Does duplicate data raise storage concerns? </p>
                           </div>
                           <div class="back">
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                              <p>A. Yes, Duplicated data takes up a large amount of storage space unnecessarily which could affect the process of storing additional more relevant data. </p>
                           </div>
                       </div>
                   </div>
               </body>
+
+              <script>
+                function toggleMenu() {
+                 var sidebar = document.querySelector('.sidebar');
+                 var content = document.querySelector('.content');
+             
+                 sidebar.classList.toggle('active');
+                 content.classList.toggle('active');
+               }
+             
+               function toggleContent(topicId) {
+                 var allSubtopics = document.querySelectorAll('.subtopic');
+                 allSubtopics.forEach(function(subtopic) {
+                   subtopic.style.display = 'none';
+                 });
+             
+                 var subtopic = document.getElementById(topicId);
+                 subtopic.style.display = (subtopic.style.display === "none") ? "block" : "none";
+               }
+             </script>
+             
+             <head>
+                 <meta charset="UTF-8">
+                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                 <title>Document</title>
+                 <style>
+                 .card{
+                     width: 25rem;
+                     height: 200px;
+                     margin: auto;
+                 }
+             
+                 .cardbody{
+                     position: relative;
+                     width: 100%;
+                     height: 100%;
+                     text-align: center;
+                     transition: transform 0.6s;
+                     transform-style: preserve-3d;
+                     box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19); 
+                 }
+             
+                 .front, .back {
+                     background-color: #ffffff;
+                     border:solid 3px turquoise;
+                     position: absolute;
+                     width: 100%;
+                     height: 100%;
+                     backface-visibility: hidden;
+                     -webkit-backface-visibility: hidden;
+                 }
+             
+                 .front p, .back p {
+                     position: relative;
+                     top: 50%;
+                     transform: translateY(-50%);
+                     font-size: large;
+                     margin: 0;
+                 }
+             
+                 .back{
+                     transform: rotateY(180deg);
+                     transition: 0.5s;
+                 }
+             
+                 .card:hover .cardbody{
+                     transform: rotateY(180deg);
+                 }
+                 </style>
+             </head>
+             
+             <body>
+                 <div class="card">
+                     <div class="cardbody">
+                         <div class="front">
+                             <p>Q. Can validation checks improve data uniqueness? </p>
+                         </div>
+                         <div class="back">
+                             <p>A. Yes, If data is structured and has validation checks, duplicate data will trigger warnings and will not be entered into the database to begin with. </p>
+                         </div>
+                     </div>
+                 </div>
+             </body>
 
           </div>
   
@@ -1459,6 +1968,9 @@ nav ul li a:hover::after {
   }
 
   function toggleContent(topicId) {
+    var introduction = document.getElementById('introduction');
+    introduction.style.display = 'none';
+
     var allSubtopics = document.querySelectorAll('.subtopic');
     allSubtopics.forEach(function(subtopic) {
       subtopic.style.display = 'none';

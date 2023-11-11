@@ -216,6 +216,10 @@ nav ul li a:hover::after {
             <div class="topic" onclick="toggleContent('mainTopic')">Information System Customization</div>
           </div>
           
+          <div class="introduction" id="introduction">
+            <p>This is the introduction</p>
+          </div>
+
           <div class="subtopic" id="mainTopic">
             <div class="topic" onclick="toggleContent('subtopic1')">Overview</div>
             
@@ -288,6 +292,9 @@ nav ul li a:hover::after {
   }
 
   function toggleContent(topicId) {
+    var introduction = document.getElementById('introduction');
+    introduction.style.display = 'none';
+
     var allSubtopics = document.querySelectorAll('.subtopic');
     allSubtopics.forEach(function(subtopic) {
       subtopic.style.display = 'none';
