@@ -272,6 +272,172 @@ nav ul li a:hover::after {
 
             <p>The next topic that will be covered is <strong>Precision</strong>. Thank you for watching!</p>
 
+            <script>
+                function toggleMenu() {
+                 var sidebar = document.querySelector('.sidebar');
+                 var content = document.querySelector('.content');
+             
+                 sidebar.classList.toggle('active');
+                 content.classList.toggle('active');
+               }
+             
+               function toggleContent(topicId) {
+                 var allSubtopics = document.querySelectorAll('.subtopic');
+                 allSubtopics.forEach(function(subtopic) {
+                   subtopic.style.display = 'none';
+                 });
+             
+                 var subtopic = document.getElementById(topicId);
+                 subtopic.style.display = (subtopic.style.display === "none") ? "block" : "none";
+               }
+             </script>
+             
+             <head>
+                 <meta charset="UTF-8">
+                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                 <title>Document</title>
+                 <style>
+                 .card{
+                     width: 25rem;
+                     height: 200px;
+                     margin: auto;
+                 }
+             
+                 .cardbody{
+                     position: relative;
+                     width: 100%;
+                     height: 100%;
+                     text-align: center;
+                     transition: transform 0.6s;
+                     transform-style: preserve-3d;
+                     box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19); 
+                 }
+             
+                 .front, .back {
+                     background-color: #ffffff;
+                     border:solid 3px turquoise;
+                     position: absolute;
+                     width: 100%;
+                     height: 100%;
+                     backface-visibility: hidden;
+                     -webkit-backface-visibility: hidden;
+                 }
+             
+                 .front p, .back p {
+                     position: relative;
+                     top: 50%;
+                     transform: translateY(-50%);
+                     font-size: large;
+                     margin: 0;
+                 }
+             
+                 .back{
+                     transform: rotateY(180deg);
+                     transition: 0.5s;
+                 }
+             
+                 .card:hover .cardbody{
+                     transform: rotateY(180deg);
+                 }
+                 </style>
+             </head>
+             
+             <body>
+                 <div class="card">
+                     <div class="cardbody">
+                         <div class="front">
+                             <p>Lorem ipsum dolor sit amet.</p>
+                         </div>
+                         <div class="back">
+                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                         </div>
+                     </div>
+                 </div>
+             </body>
+             
+             <script>
+                 function toggleMenu() {
+                  var sidebar = document.querySelector('.sidebar');
+                  var content = document.querySelector('.content');
+              
+                  sidebar.classList.toggle('active');
+                  content.classList.toggle('active');
+                }
+              
+                function toggleContent(topicId) {
+                  var allSubtopics = document.querySelectorAll('.subtopic');
+                  allSubtopics.forEach(function(subtopic) {
+                    subtopic.style.display = 'none';
+                  });
+              
+                  var subtopic = document.getElementById(topicId);
+                  subtopic.style.display = (subtopic.style.display === "none") ? "block" : "none";
+                }
+              </script>
+              
+              <head>
+                  <meta charset="UTF-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                  <title>Document</title>
+                  <style>
+                  .card{
+                      width: 25rem;
+                      height: 200px;
+                      margin: auto;
+                  }
+              
+                  .cardbody{
+                      position: relative;
+                      width: 100%;
+                      height: 100%;
+                      text-align: center;
+                      transition: transform 0.6s;
+                      transform-style: preserve-3d;
+                      box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19); 
+                  }
+              
+                  .front, .back {
+                      background-color: #ffffff;
+                      border:solid 3px turquoise;
+                      position: absolute;
+                      width: 100%;
+                      height: 100%;
+                      backface-visibility: hidden;
+                      -webkit-backface-visibility: hidden;
+                  }
+              
+                  .front p, .back p {
+                      position: relative;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      font-size: large;
+                      margin: 0;
+                  }
+              
+                  .back{
+                      transform: rotateY(180deg);
+                      transition: 0.5s;
+                  }
+              
+                  .card:hover .cardbody{
+                      transform: rotateY(180deg);
+                  }
+                  </style>
+              </head>
+              
+              <body>
+                  <div class="card">
+                      <div class="cardbody">
+                          <div class="front">
+                              <p>Lorem ipsum dolor sit amet.</p>
+                          </div>
+                          <div class="back">
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                          </div>
+                      </div>
+                  </div>
+              </body>
+
           </div>
           
           <div class="subtopic" id="subtopic2">
@@ -302,6 +468,173 @@ nav ul li a:hover::after {
             <p>Now let’s look at precision: Each time the GPS locates the cyclist the dots are far away from the center of the circle but are situated very close in a smaller area. This represents high precision with little accuracy.</p>
 
             <p>The next topic that will be covered is <strong>Completeness</strong>. Thank you for watching.</p>
+
+            <script>
+                function toggleMenu() {
+                 var sidebar = document.querySelector('.sidebar');
+                 var content = document.querySelector('.content');
+             
+                 sidebar.classList.toggle('active');
+                 content.classList.toggle('active');
+               }
+             
+               function toggleContent(topicId) {
+                 var allSubtopics = document.querySelectorAll('.subtopic');
+                 allSubtopics.forEach(function(subtopic) {
+                   subtopic.style.display = 'none';
+                 });
+             
+                 var subtopic = document.getElementById(topicId);
+                 subtopic.style.display = (subtopic.style.display === "none") ? "block" : "none";
+               }
+             </script>
+             
+             <head>
+                 <meta charset="UTF-8">
+                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                 <title>Document</title>
+                 <style>
+                 .card{
+                     width: 25rem;
+                     height: 200px;
+                     margin: auto;
+                 }
+             
+                 .cardbody{
+                     position: relative;
+                     width: 100%;
+                     height: 100%;
+                     text-align: center;
+                     transition: transform 0.6s;
+                     transform-style: preserve-3d;
+                     box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19); 
+                 }
+             
+                 .front, .back {
+                     background-color: #ffffff;
+                     border:solid 3px turquoise;
+                     position: absolute;
+                     width: 100%;
+                     height: 100%;
+                     backface-visibility: hidden;
+                     -webkit-backface-visibility: hidden;
+                 }
+             
+                 .front p, .back p {
+                     position: relative;
+                     top: 50%;
+                     transform: translateY(-50%);
+                     font-size: large;
+                     margin: 0;
+                 }
+             
+                 .back{
+                     transform: rotateY(180deg);
+                     transition: 0.5s;
+                 }
+             
+                 .card:hover .cardbody{
+                     transform: rotateY(180deg);
+                 }
+                 </style>
+             </head>
+             
+             <body>
+                 <div class="card">
+                     <div class="cardbody">
+                         <div class="front">
+                             <p>Lorem ipsum dolor sit amet.</p>
+                         </div>
+                         <div class="back">
+                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                         </div>
+                     </div>
+                 </div>
+             </body>
+             
+             <script>
+                 function toggleMenu() {
+                  var sidebar = document.querySelector('.sidebar');
+                  var content = document.querySelector('.content');
+              
+                  sidebar.classList.toggle('active');
+                  content.classList.toggle('active');
+                }
+              
+                function toggleContent(topicId) {
+                  var allSubtopics = document.querySelectorAll('.subtopic');
+                  allSubtopics.forEach(function(subtopic) {
+                    subtopic.style.display = 'none';
+                  });
+              
+                  var subtopic = document.getElementById(topicId);
+                  subtopic.style.display = (subtopic.style.display === "none") ? "block" : "none";
+                }
+              </script>
+              
+              <head>
+                  <meta charset="UTF-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                  <title>Document</title>
+                  <style>
+                  .card{
+                      width: 25rem;
+                      height: 200px;
+                      margin: auto;
+                  }
+              
+                  .cardbody{
+                      position: relative;
+                      width: 100%;
+                      height: 100%;
+                      text-align: center;
+                      transition: transform 0.6s;
+                      transform-style: preserve-3d;
+                      box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19); 
+                  }
+              
+                  .front, .back {
+                      background-color: #ffffff;
+                      border:solid 3px turquoise;
+                      position: absolute;
+                      width: 100%;
+                      height: 100%;
+                      backface-visibility: hidden;
+                      -webkit-backface-visibility: hidden;
+                  }
+              
+                  .front p, .back p {
+                      position: relative;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      font-size: large;
+                      margin: 0;
+                  }
+              
+                  .back{
+                      transform: rotateY(180deg);
+                      transition: 0.5s;
+                  }
+              
+                  .card:hover .cardbody{
+                      transform: rotateY(180deg);
+                  }
+                  </style>
+              </head>
+              
+              <body>
+                  <div class="card">
+                      <div class="cardbody">
+                          <div class="front">
+                              <p>Lorem ipsum dolor sit amet.</p>
+                          </div>
+                          <div class="back">
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                          </div>
+                      </div>
+                  </div>
+              </body>
+
           </div>
           
           <div class="subtopic" id="subtopic3">
@@ -337,6 +670,173 @@ nav ul li a:hover::after {
             <p>Additionally, because of incomplete data, data substitutions and estimations altered the results due to biased guesses and insufficient inference making these journals unreliable due to vague results intertwined with speculation and uncertainty.</p>
 
             <p>The next topic that will be covered is <strong>Consistency</strong>. Thank you for watching.</p>
+
+            <script>
+                function toggleMenu() {
+                 var sidebar = document.querySelector('.sidebar');
+                 var content = document.querySelector('.content');
+             
+                 sidebar.classList.toggle('active');
+                 content.classList.toggle('active');
+               }
+             
+               function toggleContent(topicId) {
+                 var allSubtopics = document.querySelectorAll('.subtopic');
+                 allSubtopics.forEach(function(subtopic) {
+                   subtopic.style.display = 'none';
+                 });
+             
+                 var subtopic = document.getElementById(topicId);
+                 subtopic.style.display = (subtopic.style.display === "none") ? "block" : "none";
+               }
+             </script>
+             
+             <head>
+                 <meta charset="UTF-8">
+                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                 <title>Document</title>
+                 <style>
+                 .card{
+                     width: 25rem;
+                     height: 200px;
+                     margin: auto;
+                 }
+             
+                 .cardbody{
+                     position: relative;
+                     width: 100%;
+                     height: 100%;
+                     text-align: center;
+                     transition: transform 0.6s;
+                     transform-style: preserve-3d;
+                     box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19); 
+                 }
+             
+                 .front, .back {
+                     background-color: #ffffff;
+                     border:solid 3px turquoise;
+                     position: absolute;
+                     width: 100%;
+                     height: 100%;
+                     backface-visibility: hidden;
+                     -webkit-backface-visibility: hidden;
+                 }
+             
+                 .front p, .back p {
+                     position: relative;
+                     top: 50%;
+                     transform: translateY(-50%);
+                     font-size: large;
+                     margin: 0;
+                 }
+             
+                 .back{
+                     transform: rotateY(180deg);
+                     transition: 0.5s;
+                 }
+             
+                 .card:hover .cardbody{
+                     transform: rotateY(180deg);
+                 }
+                 </style>
+             </head>
+             
+             <body>
+                 <div class="card">
+                     <div class="cardbody">
+                         <div class="front">
+                             <p>Lorem ipsum dolor sit amet.</p>
+                         </div>
+                         <div class="back">
+                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                         </div>
+                     </div>
+                 </div>
+             </body>
+             
+             <script>
+                 function toggleMenu() {
+                  var sidebar = document.querySelector('.sidebar');
+                  var content = document.querySelector('.content');
+              
+                  sidebar.classList.toggle('active');
+                  content.classList.toggle('active');
+                }
+              
+                function toggleContent(topicId) {
+                  var allSubtopics = document.querySelectorAll('.subtopic');
+                  allSubtopics.forEach(function(subtopic) {
+                    subtopic.style.display = 'none';
+                  });
+              
+                  var subtopic = document.getElementById(topicId);
+                  subtopic.style.display = (subtopic.style.display === "none") ? "block" : "none";
+                }
+              </script>
+              
+              <head>
+                  <meta charset="UTF-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                  <title>Document</title>
+                  <style>
+                  .card{
+                      width: 25rem;
+                      height: 200px;
+                      margin: auto;
+                  }
+              
+                  .cardbody{
+                      position: relative;
+                      width: 100%;
+                      height: 100%;
+                      text-align: center;
+                      transition: transform 0.6s;
+                      transform-style: preserve-3d;
+                      box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19); 
+                  }
+              
+                  .front, .back {
+                      background-color: #ffffff;
+                      border:solid 3px turquoise;
+                      position: absolute;
+                      width: 100%;
+                      height: 100%;
+                      backface-visibility: hidden;
+                      -webkit-backface-visibility: hidden;
+                  }
+              
+                  .front p, .back p {
+                      position: relative;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      font-size: large;
+                      margin: 0;
+                  }
+              
+                  .back{
+                      transform: rotateY(180deg);
+                      transition: 0.5s;
+                  }
+              
+                  .card:hover .cardbody{
+                      transform: rotateY(180deg);
+                  }
+                  </style>
+              </head>
+              
+              <body>
+                  <div class="card">
+                      <div class="cardbody">
+                          <div class="front">
+                              <p>Lorem ipsum dolor sit amet.</p>
+                          </div>
+                          <div class="back">
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                          </div>
+                      </div>
+                  </div>
+              </body>
+
           </div>
 
           <div class="subtopic" id="subtopic4">
@@ -377,6 +877,173 @@ nav ul li a:hover::after {
             <p>When a banking transaction occurs between Mike and Alisa, a request is sent in order to obtain the current account balance of the person paying. If the account balance or details changes at any point in the transaction process, the data is deemed unreliable as it cannot be considered consistent data. This will require the initial balance request to be resent in order to establish if the paying customer is able to pay or to ascertain whether the banking details given are in fact reliable before sending the payments. If the money is sent without establishing consistency, money may be lost or paid to the wrong person.</p>
 
             <p>The next topic that will be covered is <strong>Currency</strong>. Thank you for watching.</p>
+
+            <script>
+                function toggleMenu() {
+                 var sidebar = document.querySelector('.sidebar');
+                 var content = document.querySelector('.content');
+             
+                 sidebar.classList.toggle('active');
+                 content.classList.toggle('active');
+               }
+             
+               function toggleContent(topicId) {
+                 var allSubtopics = document.querySelectorAll('.subtopic');
+                 allSubtopics.forEach(function(subtopic) {
+                   subtopic.style.display = 'none';
+                 });
+             
+                 var subtopic = document.getElementById(topicId);
+                 subtopic.style.display = (subtopic.style.display === "none") ? "block" : "none";
+               }
+             </script>
+             
+             <head>
+                 <meta charset="UTF-8">
+                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                 <title>Document</title>
+                 <style>
+                 .card{
+                     width: 25rem;
+                     height: 200px;
+                     margin: auto;
+                 }
+             
+                 .cardbody{
+                     position: relative;
+                     width: 100%;
+                     height: 100%;
+                     text-align: center;
+                     transition: transform 0.6s;
+                     transform-style: preserve-3d;
+                     box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19); 
+                 }
+             
+                 .front, .back {
+                     background-color: #ffffff;
+                     border:solid 3px turquoise;
+                     position: absolute;
+                     width: 100%;
+                     height: 100%;
+                     backface-visibility: hidden;
+                     -webkit-backface-visibility: hidden;
+                 }
+             
+                 .front p, .back p {
+                     position: relative;
+                     top: 50%;
+                     transform: translateY(-50%);
+                     font-size: large;
+                     margin: 0;
+                 }
+             
+                 .back{
+                     transform: rotateY(180deg);
+                     transition: 0.5s;
+                 }
+             
+                 .card:hover .cardbody{
+                     transform: rotateY(180deg);
+                 }
+                 </style>
+             </head>
+             
+             <body>
+                 <div class="card">
+                     <div class="cardbody">
+                         <div class="front">
+                             <p>Lorem ipsum dolor sit amet.</p>
+                         </div>
+                         <div class="back">
+                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                         </div>
+                     </div>
+                 </div>
+             </body>
+             
+             <script>
+                 function toggleMenu() {
+                  var sidebar = document.querySelector('.sidebar');
+                  var content = document.querySelector('.content');
+              
+                  sidebar.classList.toggle('active');
+                  content.classList.toggle('active');
+                }
+              
+                function toggleContent(topicId) {
+                  var allSubtopics = document.querySelectorAll('.subtopic');
+                  allSubtopics.forEach(function(subtopic) {
+                    subtopic.style.display = 'none';
+                  });
+              
+                  var subtopic = document.getElementById(topicId);
+                  subtopic.style.display = (subtopic.style.display === "none") ? "block" : "none";
+                }
+              </script>
+              
+              <head>
+                  <meta charset="UTF-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                  <title>Document</title>
+                  <style>
+                  .card{
+                      width: 25rem;
+                      height: 200px;
+                      margin: auto;
+                  }
+              
+                  .cardbody{
+                      position: relative;
+                      width: 100%;
+                      height: 100%;
+                      text-align: center;
+                      transition: transform 0.6s;
+                      transform-style: preserve-3d;
+                      box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19); 
+                  }
+              
+                  .front, .back {
+                      background-color: #ffffff;
+                      border:solid 3px turquoise;
+                      position: absolute;
+                      width: 100%;
+                      height: 100%;
+                      backface-visibility: hidden;
+                      -webkit-backface-visibility: hidden;
+                  }
+              
+                  .front p, .back p {
+                      position: relative;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      font-size: large;
+                      margin: 0;
+                  }
+              
+                  .back{
+                      transform: rotateY(180deg);
+                      transition: 0.5s;
+                  }
+              
+                  .card:hover .cardbody{
+                      transform: rotateY(180deg);
+                  }
+                  </style>
+              </head>
+              
+              <body>
+                  <div class="card">
+                      <div class="cardbody">
+                          <div class="front">
+                              <p>Lorem ipsum dolor sit amet.</p>
+                          </div>
+                          <div class="back">
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                          </div>
+                      </div>
+                  </div>
+              </body>
+
           </div>
           
           <div class="subtopic" id="subtopic5">
@@ -416,6 +1083,173 @@ nav ul li a:hover::after {
             <p>When businesses close or new franchises move into areas, Google Maps needs to ensure they update the maps to stay relevant to users; otherwise, it may indicate that a business is located on the map, and when users arrive at the destination, it is no longer there. Therefore, ensuring data currency is the most vital data quality attribute for Google Maps.</p>
 
             <p>The next topic that will be covered is <strong>Uniqueness</strong>. Thank you for watching.</p>
+
+            <script>
+                function toggleMenu() {
+                 var sidebar = document.querySelector('.sidebar');
+                 var content = document.querySelector('.content');
+             
+                 sidebar.classList.toggle('active');
+                 content.classList.toggle('active');
+               }
+             
+               function toggleContent(topicId) {
+                 var allSubtopics = document.querySelectorAll('.subtopic');
+                 allSubtopics.forEach(function(subtopic) {
+                   subtopic.style.display = 'none';
+                 });
+             
+                 var subtopic = document.getElementById(topicId);
+                 subtopic.style.display = (subtopic.style.display === "none") ? "block" : "none";
+               }
+             </script>
+             
+             <head>
+                 <meta charset="UTF-8">
+                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                 <title>Document</title>
+                 <style>
+                 .card{
+                     width: 25rem;
+                     height: 200px;
+                     margin: auto;
+                 }
+             
+                 .cardbody{
+                     position: relative;
+                     width: 100%;
+                     height: 100%;
+                     text-align: center;
+                     transition: transform 0.6s;
+                     transform-style: preserve-3d;
+                     box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19); 
+                 }
+             
+                 .front, .back {
+                     background-color: #ffffff;
+                     border:solid 3px turquoise;
+                     position: absolute;
+                     width: 100%;
+                     height: 100%;
+                     backface-visibility: hidden;
+                     -webkit-backface-visibility: hidden;
+                 }
+             
+                 .front p, .back p {
+                     position: relative;
+                     top: 50%;
+                     transform: translateY(-50%);
+                     font-size: large;
+                     margin: 0;
+                 }
+             
+                 .back{
+                     transform: rotateY(180deg);
+                     transition: 0.5s;
+                 }
+             
+                 .card:hover .cardbody{
+                     transform: rotateY(180deg);
+                 }
+                 </style>
+             </head>
+             
+             <body>
+                 <div class="card">
+                     <div class="cardbody">
+                         <div class="front">
+                             <p>Lorem ipsum dolor sit amet.</p>
+                         </div>
+                         <div class="back">
+                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                         </div>
+                     </div>
+                 </div>
+             </body>
+             
+             <script>
+                 function toggleMenu() {
+                  var sidebar = document.querySelector('.sidebar');
+                  var content = document.querySelector('.content');
+              
+                  sidebar.classList.toggle('active');
+                  content.classList.toggle('active');
+                }
+              
+                function toggleContent(topicId) {
+                  var allSubtopics = document.querySelectorAll('.subtopic');
+                  allSubtopics.forEach(function(subtopic) {
+                    subtopic.style.display = 'none';
+                  });
+              
+                  var subtopic = document.getElementById(topicId);
+                  subtopic.style.display = (subtopic.style.display === "none") ? "block" : "none";
+                }
+              </script>
+              
+              <head>
+                  <meta charset="UTF-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                  <title>Document</title>
+                  <style>
+                  .card{
+                      width: 25rem;
+                      height: 200px;
+                      margin: auto;
+                  }
+              
+                  .cardbody{
+                      position: relative;
+                      width: 100%;
+                      height: 100%;
+                      text-align: center;
+                      transition: transform 0.6s;
+                      transform-style: preserve-3d;
+                      box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19); 
+                  }
+              
+                  .front, .back {
+                      background-color: #ffffff;
+                      border:solid 3px turquoise;
+                      position: absolute;
+                      width: 100%;
+                      height: 100%;
+                      backface-visibility: hidden;
+                      -webkit-backface-visibility: hidden;
+                  }
+              
+                  .front p, .back p {
+                      position: relative;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      font-size: large;
+                      margin: 0;
+                  }
+              
+                  .back{
+                      transform: rotateY(180deg);
+                      transition: 0.5s;
+                  }
+              
+                  .card:hover .cardbody{
+                      transform: rotateY(180deg);
+                  }
+                  </style>
+              </head>
+              
+              <body>
+                  <div class="card">
+                      <div class="cardbody">
+                          <div class="front">
+                              <p>Lorem ipsum dolor sit amet.</p>
+                          </div>
+                          <div class="back">
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                          </div>
+                      </div>
+                  </div>
+              </body>
+
           </div>
 
           <div class="subtopic" id="subtopic6">
@@ -444,6 +1278,173 @@ nav ul li a:hover::after {
             <p>It will affect the restock of items if the blankets are sold as chocolates because the number of blankets in stock will decrease but the data will state a full inventory exists, which will affect reorders and potentially cause losses to the business while waiting for a shipment to refill the warehouses. However, on the other hand, the stock of chocolates will be higher than what the database states which may lead to premature reorders that cannot be stored as the warehouse capacity overfills.</p>
 
             <p>The next topic that will be covered is <strong>Data Ethics</strong>. Thank you for watching.</p>
+
+            <script>
+                function toggleMenu() {
+                 var sidebar = document.querySelector('.sidebar');
+                 var content = document.querySelector('.content');
+             
+                 sidebar.classList.toggle('active');
+                 content.classList.toggle('active');
+               }
+             
+               function toggleContent(topicId) {
+                 var allSubtopics = document.querySelectorAll('.subtopic');
+                 allSubtopics.forEach(function(subtopic) {
+                   subtopic.style.display = 'none';
+                 });
+             
+                 var subtopic = document.getElementById(topicId);
+                 subtopic.style.display = (subtopic.style.display === "none") ? "block" : "none";
+               }
+             </script>
+             
+             <head>
+                 <meta charset="UTF-8">
+                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                 <title>Document</title>
+                 <style>
+                 .card{
+                     width: 25rem;
+                     height: 200px;
+                     margin: auto;
+                 }
+             
+                 .cardbody{
+                     position: relative;
+                     width: 100%;
+                     height: 100%;
+                     text-align: center;
+                     transition: transform 0.6s;
+                     transform-style: preserve-3d;
+                     box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19); 
+                 }
+             
+                 .front, .back {
+                     background-color: #ffffff;
+                     border:solid 3px turquoise;
+                     position: absolute;
+                     width: 100%;
+                     height: 100%;
+                     backface-visibility: hidden;
+                     -webkit-backface-visibility: hidden;
+                 }
+             
+                 .front p, .back p {
+                     position: relative;
+                     top: 50%;
+                     transform: translateY(-50%);
+                     font-size: large;
+                     margin: 0;
+                 }
+             
+                 .back{
+                     transform: rotateY(180deg);
+                     transition: 0.5s;
+                 }
+             
+                 .card:hover .cardbody{
+                     transform: rotateY(180deg);
+                 }
+                 </style>
+             </head>
+             
+             <body>
+                 <div class="card">
+                     <div class="cardbody">
+                         <div class="front">
+                             <p>Lorem ipsum dolor sit amet.</p>
+                         </div>
+                         <div class="back">
+                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                         </div>
+                     </div>
+                 </div>
+             </body>
+             
+             <script>
+                 function toggleMenu() {
+                  var sidebar = document.querySelector('.sidebar');
+                  var content = document.querySelector('.content');
+              
+                  sidebar.classList.toggle('active');
+                  content.classList.toggle('active');
+                }
+              
+                function toggleContent(topicId) {
+                  var allSubtopics = document.querySelectorAll('.subtopic');
+                  allSubtopics.forEach(function(subtopic) {
+                    subtopic.style.display = 'none';
+                  });
+              
+                  var subtopic = document.getElementById(topicId);
+                  subtopic.style.display = (subtopic.style.display === "none") ? "block" : "none";
+                }
+              </script>
+              
+              <head>
+                  <meta charset="UTF-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                  <title>Document</title>
+                  <style>
+                  .card{
+                      width: 25rem;
+                      height: 200px;
+                      margin: auto;
+                  }
+              
+                  .cardbody{
+                      position: relative;
+                      width: 100%;
+                      height: 100%;
+                      text-align: center;
+                      transition: transform 0.6s;
+                      transform-style: preserve-3d;
+                      box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19); 
+                  }
+              
+                  .front, .back {
+                      background-color: #ffffff;
+                      border:solid 3px turquoise;
+                      position: absolute;
+                      width: 100%;
+                      height: 100%;
+                      backface-visibility: hidden;
+                      -webkit-backface-visibility: hidden;
+                  }
+              
+                  .front p, .back p {
+                      position: relative;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      font-size: large;
+                      margin: 0;
+                  }
+              
+                  .back{
+                      transform: rotateY(180deg);
+                      transition: 0.5s;
+                  }
+              
+                  .card:hover .cardbody{
+                      transform: rotateY(180deg);
+                  }
+                  </style>
+              </head>
+              
+              <body>
+                  <div class="card">
+                      <div class="cardbody">
+                          <div class="front">
+                              <p>Lorem ipsum dolor sit amet.</p>
+                          </div>
+                          <div class="back">
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                          </div>
+                      </div>
+                  </div>
+              </body>
+
           </div>
   
 
