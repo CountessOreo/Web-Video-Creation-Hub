@@ -4,6 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ - Information Systems</title>
+    <link rel="stylesheet" href="styles.css">
+    <header>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <h1>The Business Consultants - Information Systems <a href="https://youtube.com/@TheBusinessConsultantsINF181?si=jrIhxsVVROchOReG" target="_blank"><img src="./Pictures/youtube.png" height="50em"></a></h1>
+        <nav class="sidebar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="datavisualisation.html">Data Visualisation</a></li>
+                <li><a href="qualityofinformation.html">Quality of Information</a></li>
+                <li><a href="dataethics.html">Data Ethics</a></li>
+                <li><a href="informationsystems.html">Information Systems</a></li>
+                <li><a href="integration.html">Information Systems integration</a></li>
+                <li><a href="customizing.html">Customizing Information Systems</a></li>
+                <li><a href="bibliography.html">Bibliography</a></li>
+                <li><a href="FAQ.html" target="_blank">FAQ</a></li>
+                <li><a href="contact.html" target="_blank">Contact</a></li>
+            </ul>
+        </nav>
+        </nav>
+    </header>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('active');
+        }
+    </script>
     <style>
         body {
             font-family: 'Arial', sans-serif;
