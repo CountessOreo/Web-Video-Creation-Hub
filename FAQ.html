@@ -55,6 +55,14 @@
             color: #555;
             margin-bottom: 20px;
         }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .feedback-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
@@ -120,4 +128,42 @@
     <h2>20. Can you provide examples of how Data Visualization is utilized in education for student performance analysis?</h2>
     <p>Educational institutions use Data Visualization to track student academic performance, attendance patterns, and engagement levels. For instance, a school district may use visualizations to analyze exam scores across different subjects, identifying areas where students may need additional support and resources.</p>
 </body>
+<div class="feedback-form">
+    <h2>Was this page helpful?</h2>
+    <form id="feedbackForm">
+        <label>
+            <input type="radio" name="feedback" value="helpful"> Helpful
+        </label>
+        <label>
+            <input type="radio" name="feedback" value="not-helpful"> Not Helpful
+        </label>
+        <br>
+        <label for="comments">Comments (optional):</label>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+        <br>
+        <button type="button" onclick="submitFeedback()">Submit Feedback</button>
+    </form>
+<button onclick="window.location.href='contact.html'">Contact Us</button>
+<script>
+    function submitFeedback() {
+       
+        var feedbackValue = document.querySelector('input[name="feedback"]:checked');
+        var commentsValue = document.getElementById('comments').value;
+
+      
+        if (feedbackValue) {
+          
+            console.log('Feedback:', feedbackValue.value);
+            console.log('Comments:', commentsValue);
+            
+      
+            alert('Thank you for your feedback!');
+            
+       
+            document.getElementById('feedbackForm').reset();
+        } else {
+            alert('Please select whether the page was helpful or not.');
+        }
+    }
+</script>
 </html>
