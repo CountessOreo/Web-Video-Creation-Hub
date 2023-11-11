@@ -6,226 +6,256 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customizing Information Systems</title>
     <link rel="stylesheet" href="styles.css">
-  <style>
-    select {
-    font-size: 16px;
-    margin-top: 20px;
-}
-
-
-#content {
-    margin-top: 20px;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    position: relative;
-}
-
-nav ul li a:hover {
-    color: #ff6600;
-}
-
-nav ul li a::after {
-    content: '';
-    display: block;
-    height: 2px;
-    width: 0;
-    background-color: #ff6600;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transition: width 0.3s ease, left 0.3s ease;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-    left: 0;
-}
-
-.menu-toggle {
-    cursor: pointer;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 2;
-}
-
-.menu-toggle .bar {
-    height: 3px;
-    width: 25px;
-    background-color: rgb(10, 51, 128);
-    margin: 6px 0;
-    transition: 0.4s;
-}
-
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #333;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    z-index: 1;
-}
-
-.sidebar a {
-    padding: 15px 25px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #fff;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidebar a:hover {
-    color: #ff6600;
-}
-
-.sidebar.active {
-    width: 250px;
-}
-    .card{
-        width: 25rem;
-        height: 200px;
-        margin: auto;
-    }
-
-    .cardbody{
-        position: relative;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        transition: transform 0.6s;
-        transform-style: preserve-3d;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19); 
-    }
-
-    .front, .back {
-        background-color: #ffffff;
-        border:solid 3px turquoise;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
-    }
-
-    .front p, .back p {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: large;
-        margin: 0;
-    }
-
-    .back{
-        transform: rotateY(180deg);
-    }
-
-    .card:hover .cardbody{
-        transform: rotateY(180deg);
-    }
-
-    .topics-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .topic {
-        flex: 1;
-        cursor: pointer;
-        padding: 10px;
-        background-color: #f1f1f1;
-        border: 1px solid #ddd;
-        margin: 5px;
-    }
-
-    .subtopic {
-        display: none;
-        padding: 10px;
-        border-top: 1px solid #ddd;
-        width: 100%;
-    }
-
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #e0e0e0;
-        width: 70%; 
-        margin-left: 15%;
-    }
-
-    header {
-        background-color: #333;
-        color: #fff;
-        padding: 10px 0;
-        text-align: center;
-        width: 100%;
-    }
-
-    .menu-toggle {
-        cursor: pointer;
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        z-index: 2;
-        width: 30%; 
-    }
-
-    .sidebar {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: #333;
-        overflow-x: hidden;
-        transition: 0.5s;
-        padding-top: 60px;
-        z-index: 1;
-    }
+    <style>
+        select {
+        font-size: 16px;
+        margin-top: 20px;
+        }
     
-    </style>
+        #content {
+            margin-top: 20px;
+        }
+    
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+    
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+    
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+    
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+    
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+    
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+    
+        nav ul li a:hover {
+            color: #ff6600;
+        }
+    
+        nav ul li a::after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 0;
+            background-color: #ff6600;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+    
+        nav ul li a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+    
+        .menu-toggle {
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+        }
+    
+        .menu-toggle .bar {
+            height: 3px;
+            width: 25px;
+            background-color: #fff;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+    
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 1;
+        }
+    
+        .sidebar a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+    
+        .sidebar a:hover {
+            color: #ff6600;
+        }
+    
+        .sidebar.active {
+            width: 250px;
+        }
+    
+        .card{
+            width: 25rem;
+            height: 200px;
+            margin: 10px 20px;
+            display: inline-block;
+        }
+    
+        .cardbody{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19); 
+        }
+    
+        .front, .back {
+            background-color: #ffffff;
+            border:solid 3px turquoise;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+    
+        .front p, .back p {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: large;
+            margin: 0;
+        }
+    
+        .back{
+            transform: rotateY(180deg);
+        }
+    
+        .card:hover .cardbody{
+            transform: rotateY(180deg);
+        }
+    
+        .topics-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    
+        .topic {
+            flex: 1;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            margin: 5px;
+        }
+    
+        .subtopic {
+            display: none;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+            width: 100%;
+        }
+    
+        .introduction {
+        padding: 10px;
+        background-color: #ffffff;
+        margin: 5px;
+        }
+    
+        #subtopic1{
+            text-align: center;
+        }
+    
+        .uncentering{
+            text-align: left;
+            margin-left: 1%;
+            margin-right: 1%;
+        }
+    
+        h3, h4{
+            text-decoration: underline;
+        }
+    
+        .steps{
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    
+        .listitems{
+            margin-left: 1%;
+        }
+    
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0e0e0;
+            width: 70%; 
+            margin-left: 15%;
+        }
+    
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+        }
+    
+        .menu-toggle {
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+            width: 30%; 
+        }
+    
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 1;
+        }
+       
+        </style>
 
   
 </head>
@@ -257,7 +287,7 @@ nav ul li a:hover::after {
           </div>
           
           <div class="introduction" id="introduction">
-            <p>This is the introduction</p>
+            <p>Information System Customization involves tailoring and adapting information systems to meet the specific needs and requirements of an organization. Rather than using off-the-shelf solutions that may not perfectly align with the unique processes and workflows of a business, customization allows for the modification, configuration, and development of information systems to ensure optimal functionality and efficiency. This tailored approach can enhance user satisfaction, improve productivity, and align technology solutions with the strategic goals of the organization.</p>
           </div>
 
           <div class="subtopic" id="mainTopic">
@@ -319,112 +349,60 @@ nav ul li a:hover::after {
                 <li>•	Complexity: Excessive customization can contribute to unneeded complexity, making the system more difficult to use and administer.</li>
                 <li>•	Business Process Changes: Businesses must sometimes change their procedures to meet the customized system, which might cause employee resistance and diminish productivity.</li>
             </ul>
-          </div>
 
+            <div class="card">
+                <div class="cardbody">
+                    <div class="front">
+                        <p>Q. What are the 7 steps, in order, that a business should follow to customize an already established information system? </p>
+                    </div>
+                    <div class="back">
+                        <p>A. Step 1: Identify Business Needs, Step 2: Define System Requirements, Step 3: Evaluate Existing Systems, Step 4: Customize, Step 5: Test System, Step 6: Train Staff, and Step 7: Monitor and Update the System. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardbody">
+                    <div class="front">
+                        <p>Q. What are some risks when customizing information systems? </p>
+                    </div>
+                    <div class="back">
+                        <p>A. Cost Increases, dependence on vendors or developers, security threats, overcomplexity, and business process changes. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardbody">
+                    <div class="front">
+                        <p>Q. What is a pilot project, otherwise known as a pilot study? </p>
+                    </div>
+                    <div class="back">
+                        <p>A. A scaled-down version of a larger project that assesses the feasibility of carrying it out on a larger scale. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script>
-   function toggleMenu() {
-    var sidebar = document.querySelector('.sidebar');
-    var content = document.querySelector('.content');
-
-    sidebar.classList.toggle('active');
-    content.classList.toggle('active');
-  }
-
-  function toggleContent(topicId) {
-    var introduction = document.getElementById('introduction');
-    introduction.style.display = 'none';
-
-    var allSubtopics = document.querySelectorAll('.subtopic');
-    allSubtopics.forEach(function(subtopic) {
-      subtopic.style.display = 'none';
-    });
-
-    var subtopic = document.getElementById(topicId);
-    subtopic.style.display = (subtopic.style.display === "none") ? "block" : "none";
-  }
-</script>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-    .card{
-        width: 25rem;
-        height: 200px;
-        margin: auto;
-    }
-
-    .cardbody{
-        position: relative;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        transition: transform 0.6s;
-        transform-style: preserve-3d;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19); 
-    }
-
-    .front, .back {
-        background-color: #ffffff;
-        border:solid 3px turquoise;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
-    }
-
-    .front p, .back p {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: large;
-        margin: 0;
-    }
-
-    .back{
-        transform: rotateY(180deg);
-        transition: 0.5s;
-    }
-
-    .card:hover .cardbody{
-        transform: rotateY(180deg);
-    }
-    </style>
-</head>
-
-<body>
-    <div class="card">
-        <div class="cardbody">
-            <div class="front">
-                <p>Q. What are the 7 steps, in order, that a business should follow to customize an already established information system? </p>
-            </div>
-            <div class="back">
-                <p>A. Step 1: Identify Business Needs, Step 2: Define System Requirements, Step 3: Evaluate Existing Systems, Step 4: Customize, Step 5: Test System, Step 6: Train Staff, and Step 7: Monitor and Update the System. </p>
-            </div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="cardbody">
-            <div class="front">
-                <p>Q. What are some risks when customizing information systems? </p>
-            </div>
-            <div class="back">
-                <p>A. Cost Increases, dependence on vendors or developers, security threats, overcomplexity, and business process changes. </p>
-            </div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="cardbody">
-            <div class="front">
-                <p>Q. What is a pilot project, otherwise known as a pilot study? </p>
-            </div>
-            <div class="back">
-                <p>A. A scaled-down version of a larger project that assesses the feasibility of carrying it out on a larger scale. </p>
-            </div>
-        </div>
-    </div>
-</body>
+    function toggleMenu() {
+     var sidebar = document.querySelector('.sidebar');
+     var content = document.querySelector('.content');
+ 
+     sidebar.classList.toggle('active');
+     content.classList.toggle('active');
+   }
+ 
+   function toggleContent(topicId) {
+     var introduction = document.getElementById('introduction');
+     introduction.style.display = 'none';
+ 
+     var allSubtopics = document.querySelectorAll('.subtopic');
+     allSubtopics.forEach(function(subtopic) {
+       subtopic.style.display = 'none';
+     });
+ 
+     var subtopic = document.getElementById(topicId);
+     subtopic.style.display = (subtopic.style.display === "none") ? "block" : "none";
+   }
+ </script>
 </html>
