@@ -187,6 +187,12 @@ nav ul li a:hover::after {
       border-top: 1px solid #ddd;
       width: 100%;
     }
+
+    .introduction {
+      padding: 10px;
+      background-color: #ffffff;
+      margin: 5px;
+    }
     </style>
 
   
@@ -215,7 +221,11 @@ nav ul li a:hover::after {
         </header>
    
         <div class="topics-container">
-            <div class="topic" onclick="toggleContent('mainTopic')">Data Visualisation</div>
+            <div class="topic" onclick="toggleContent('mainTopic')">Main Topic</div>
+          </div>
+          
+          <div class="introduction" id="introduction">
+            <p>This is the introduction to the Main Topic.</p>
           </div>
           
           <div class="subtopic" id="mainTopic">
@@ -332,10 +342,10 @@ nav ul li a:hover::after {
     <div class="card">
         <div class="cardbody">
             <div class="front">
-                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Q. What is data visualization? </p>
             </div>
             <div class="back">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                <p>A. A graphical representation, either through charts, graphs, infographics, or animations that depict complicated data relationships.   </p>
             </div>
         </div>
     </div>
@@ -410,19 +420,7 @@ nav ul li a:hover::after {
      }
      </style>
  </head>
- 
- <body>
-     <div class="card">
-         <div class="cardbody">
-             <div class="front">
-                 <p>Lorem ipsum dolor sit amet.</p>
-             </div>
-             <div class="back">
-                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
-             </div>
-         </div>
-     </div>
- </body>
+
 
           </div>
           
@@ -520,10 +518,10 @@ nav ul li a:hover::after {
                  <div class="card">
                      <div class="cardbody">
                          <div class="front">
-                             <p>Lorem ipsum dolor sit amet.</p>
+                             <p>Q. What are the benefits of data visualization? </p>
                          </div>
                          <div class="back">
-                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                             <p>A. Better Data Analysis, improved interactivity, and improved reporting </p>
                          </div>
                      </div>
                  </div>
@@ -598,20 +596,6 @@ nav ul li a:hover::after {
                   }
                   </style>
               </head>
-              
-              <body>
-                  <div class="card">
-                      <div class="cardbody">
-                          <div class="front">
-                              <p>Lorem ipsum dolor sit amet.</p>
-                          </div>
-                          <div class="back">
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
-                          </div>
-                      </div>
-                  </div>
-              </body>
-
           </div>
           
           <div class="subtopic" id="subtopic4">
@@ -708,10 +692,10 @@ nav ul li a:hover::after {
                  <div class="card">
                      <div class="cardbody">
                          <div class="front">
-                             <p>Lorem ipsum dolor sit amet.</p>
+                             <p>Q. True or False Strategic planning, managerial skills and predictive analysis all have an impact on decision making in information systems. </p>
                          </div>
                          <div class="back">
-                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
+                             <p>A. False, strategic planning, PERFORMANCE MONITORING, and predictive analysis all have an impact on decision making in information systems. </p>
                          </div>
                      </div>
                  </div>
@@ -786,19 +770,6 @@ nav ul li a:hover::after {
                   }
                   </style>
               </head>
-              
-              <body>
-                  <div class="card">
-                      <div class="cardbody">
-                          <div class="front">
-                              <p>Lorem ipsum dolor sit amet.</p>
-                          </div>
-                          <div class="back">
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
-                          </div>
-                      </div>
-                  </div>
-              </body>
 
           </div>
 
@@ -894,19 +865,6 @@ nav ul li a:hover::after {
                  </style>
              </head>
              
-             <body>
-                 <div class="card">
-                     <div class="cardbody">
-                         <div class="front">
-                             <p>Lorem ipsum dolor sit amet.</p>
-                         </div>
-                         <div class="back">
-                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
-                         </div>
-                     </div>
-                 </div>
-             </body>
-             
              <script>
                  function toggleMenu() {
                   var sidebar = document.querySelector('.sidebar');
@@ -976,6 +934,8 @@ nav ul li a:hover::after {
                   }
                   </style>
               </head>
+<<<<<<< HEAD
+=======
               
               <body>
                   <div class="card">
@@ -990,5 +950,35 @@ nav ul li a:hover::after {
                   </div>
               </body>
           </div>
+<<<<<<< HEAD
+          
+  
+
+</body>
+<script>
+   function toggleMenu() {
+    var sidebar = document.querySelector('.sidebar');
+    var content = document.querySelector('.content');
+
+    sidebar.classList.toggle('active');
+    content.classList.toggle('active');
+  }
+
+  function toggleContent(topicId) {
+    var introduction = document.getElementById('introduction');
+    introduction.style.display = 'none';
+
+    var allSubtopics = document.querySelectorAll('.subtopic');
+    allSubtopics.forEach(function(subtopic) {
+      subtopic.style.display = 'none';
+    });
+
+    var subtopic = document.getElementById(topicId);
+    subtopic.style.display = (subtopic.style.display === "none") ? "block" : "none";
+  }
+</script>
+=======
+>>>>>>> 1f0a1f68abcd8a618df50fae92dec03608069c17
+>>>>>>> f988518e6915305afa1cdff53326c5f443a8bae5
 </html>
 

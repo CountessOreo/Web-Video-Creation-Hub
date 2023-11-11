@@ -223,6 +223,12 @@
         font-size: 18px;
     }
 
+    .introduction {
+      padding: 10px;
+      background-color: #ffffff;
+      margin: 5px;
+    }
+
     </style>
 
 
@@ -253,6 +259,10 @@
         <div class="topics-container">
             <div class="topic" onclick="toggleContent('mainTopic')">Data Ethics</div>
         </div>
+
+        <div class="introduction" id="introduction">
+            <p>This is the introduction</p>
+          </div>
         
         <div class="subtopic" id="mainTopic">
             <div class="topic" onclick="toggleContent('subtopic1')">Overview</div>
@@ -350,14 +360,17 @@
     }
 
     function toggleContent(topicId) {
+    var introduction = document.getElementById('introduction');
+    introduction.style.display = 'none';
+
     var allSubtopics = document.querySelectorAll('.subtopic');
     allSubtopics.forEach(function(subtopic) {
-    subtopic.style.display = 'none';
+      subtopic.style.display = 'none';
     });
 
     var subtopic = document.getElementById(topicId);
     subtopic.style.display = (subtopic.style.display === "none") ? "block" : "none";
-    }
+  }
 </script>
 
 </html>
