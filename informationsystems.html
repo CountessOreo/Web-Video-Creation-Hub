@@ -7,126 +7,126 @@
     <title>Role of AI Integration in Information Systems</title>
     <link rel="stylesheet" href="styles.css">
   <style>
-    select {
+      select {
     font-size: 16px;
     margin-top: 20px;
-}
+    }
 
-#content {
-    margin-top: 20px;
-}
+    #content {
+        margin-top: 20px;
+    }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
 
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px;
-}
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 20px;
+    }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+    }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    position: relative;
-}
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        position: relative;
+    }
 
-nav ul li a:hover {
-    color: #ff6600;
-}
+    nav ul li a:hover {
+        color: #ff6600;
+    }
 
-nav ul li a::after {
-    content: '';
-    display: block;
-    height: 2px;
-    width: 0;
-    background-color: #ff6600;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transition: width 0.3s ease, left 0.3s ease;
-}
+    nav ul li a::after {
+        content: '';
+        display: block;
+        height: 2px;
+        width: 0;
+        background-color: #ff6600;
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transition: width 0.3s ease, left 0.3s ease;
+    }
 
-nav ul li a:hover::after {
-    width: 100%;
-    left: 0;
-}
+    nav ul li a:hover::after {
+        width: 100%;
+        left: 0;
+    }
 
-.menu-toggle {
-    cursor: pointer;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 2;
-}
+    .menu-toggle {
+        cursor: pointer;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+    }
 
-.menu-toggle .bar {
-    height: 3px;
-    width: 25px;
-    background-color: #000000;
-    margin: 6px 0;
-    transition: 0.4s;
-}
+    .menu-toggle .bar {
+        height: 3px;
+        width: 25px;
+        background-color: #fff;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
 
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #333;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    z-index: 1;
-}
+    .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #333;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        z-index: 1;
+    }
 
-.sidebar a {
-    padding: 15px 25px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #fff;
-    display: block;
-    transition: 0.3s;
-}
+    .sidebar a {
+        padding: 15px 25px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #fff;
+        display: block;
+        transition: 0.3s;
+    }
 
-.sidebar a:hover {
-    color: #ff6600;
-}
+    .sidebar a:hover {
+        color: #ff6600;
+    }
 
-.sidebar.active {
-    width: 250px;
-}
+    .sidebar.active {
+        width: 250px;
+    }
+
     .card{
         width: 25rem;
         height: 200px;
         margin: 10px 20px;
         display: inline-block;
-
     }
 
     .cardbody{
@@ -187,6 +187,12 @@ nav ul li a:hover::after {
         width: 100%;
     }
 
+    .introduction {
+    padding: 10px;
+    background-color: #ffffff;
+    margin: 5px;
+    }
+
     #subtopic1{
         text-align: center;
     }
@@ -197,30 +203,16 @@ nav ul li a:hover::after {
         margin-right: 1%;
     }
 
-    .fontsize{
-        font-size: 18px;
-    }
-
-    h3{
+    h3, h4{
         text-decoration: underline;
     }
 
-    .images{
-        display: inline-block;
-        width: 100%;
-        text-align: center;
-        padding: 15px 0px;
+    .steps{
+        font-weight: bold;
+        text-decoration: underline;
     }
 
-    #quote{
-        text-align: center;
-    }
-
-    img{
-        width: 25%;
-    }
-
-    p{
+    .listitems{
         margin-left: 1%;
     }
 
@@ -650,22 +642,25 @@ nav ul li a:hover::after {
 </body>
 <script>
     function toggleMenu() {
-    var sidebar = document.querySelector('.sidebar');
-    var content = document.querySelector('.content');
-
-    sidebar.classList.toggle('active');
-    content.classList.toggle('active');
-    }
-
-    function toggleContent(topicId) {
-    var allSubtopics = document.querySelectorAll('.subtopic');
-    allSubtopics.forEach(function(subtopic) {
-    subtopic.style.display = 'none';
-    });
-
-    var subtopic = document.getElementById(topicId);
-    subtopic.style.display = (subtopic.style.display === "none") ? "block" : "none";
-    }
-</script>
+     var sidebar = document.querySelector('.sidebar');
+     var content = document.querySelector('.content');
+ 
+     sidebar.classList.toggle('active');
+     content.classList.toggle('active');
+   }
+ 
+   function toggleContent(topicId) {
+     var introduction = document.getElementById('introduction');
+     introduction.style.display = 'none';
+ 
+     var allSubtopics = document.querySelectorAll('.subtopic');
+     allSubtopics.forEach(function(subtopic) {
+       subtopic.style.display = 'none';
+     });
+ 
+     var subtopic = document.getElementById(topicId);
+     subtopic.style.display = (subtopic.style.display === "none") ? "block" : "none";
+   }
+ </script>
 
 </html>
