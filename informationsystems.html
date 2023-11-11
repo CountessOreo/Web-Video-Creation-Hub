@@ -184,6 +184,13 @@ nav ul li a:hover::after {
       border-top: 1px solid #ddd;
       width: 100%;
     }
+
+    .introduction {
+      padding: 10px;
+      background-color: #ffffff;
+      margin: 5px;
+    }
+    
     </style>
 
   
@@ -215,6 +222,10 @@ nav ul li a:hover::after {
             <div class="topic" onclick="toggleContent('mainTopic')">AI Integration</div>
           </div>
           
+          <div class="introduction" id="introduction">
+            <p>This is the introduction</p>
+          </div>
+
           <div class="subtopic" id="mainTopic">
             <div class="topic" onclick="toggleContent('subtopic1')">Overview</div>
           </div>
@@ -477,6 +488,9 @@ nav ul li a:hover::after {
   }
 
   function toggleContent(topicId) {
+    var introduction = document.getElementById('introduction');
+    introduction.style.display = 'none';
+
     var allSubtopics = document.querySelectorAll('.subtopic');
     allSubtopics.forEach(function(subtopic) {
       subtopic.style.display = 'none';
