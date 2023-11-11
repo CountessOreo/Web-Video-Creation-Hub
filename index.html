@@ -106,3 +106,84 @@ A digital information literacy toolkit is a repository of digital information wh
 <p>As we continue this journey, we're going to equip you with the knowledge and tools you need to thrive in this digital era. So fasten your seat belts and get ready for an engaging adventure through the world of Information Systems, digital literacy, and so much more. Thank you for joining us on this exciting journey, and let's dive in.</p>
 
 </body>
+<body>
+
+    <div id="comment-section">
+
+        <div class="comment">
+            <strong>John Doe</strong>
+            <p>This site is so nice! Rating: &#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        </div>
+    
+        <div class="comment">
+            <strong>Jane Smith</strong>
+            <p>I learnt so much thx. Rating: &#9733;&#9733;&#9733;</p>
+        </div>
+        <div class="comment">
+            <strong>Mr Sir</strong>
+            <p>This is the best site I have ever seen, I learnt so much. This group is getting 100%. Rating: &#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        </div>
+    
+        <div class="comment-form">
+            <h3>Add a Comment</h3>
+            <form id="new-comment-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment" rows="4" required></textarea>
+    
+                <div class="star-rating">
+                    <input type="radio" id="star5" name="rating" value="5" required>
+                    <label for="star5">&#9733;</label>
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4">&#9733;</label>
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3">&#9733;</label>
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2">&#9733;</label>
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1">&#9733;</label>
+                </div>
+    
+                <button type="button" onclick="addComment()">Post Comment</button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        function addComment() {
+
+            var name = document.getElementById('name').value;
+            var commentText = document.getElementById('comment').value;
+            var rating = document.querySelector('input[name="rating"]:checked');
+    
+            if (!name || !commentText || !rating) {
+                alert("Please fill in all fields before submitting.");
+                return;
+            }
+    
+
+            var newComment = document.createElement('div');
+            newComment.className = 'comment';
+            newComment.innerHTML = '<strong>' + name + '</strong><p>' + commentText + ' Rating: ' + getStars(rating.value) + '</p>';
+    
+
+            document.getElementById('comment-section').appendChild(newComment);
+    
+
+            document.getElementById('name').value = '';
+            document.getElementById('comment').value = '';
+            rating.checked = false; 
+        }
+    
+        function getStars(count) {
+            var stars = '';
+            for (var i = 0; i < count; i++) {
+                stars += '&#9733;';
+            }
+            return stars;
+        }
+    </script>
+    
+    </body>
