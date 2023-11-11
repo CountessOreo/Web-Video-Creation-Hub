@@ -116,3 +116,44 @@ nav ul li a:hover::after {
 .sidebar.active {
     width: 250px;
 }
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#comment-section {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.comment {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.comment-form {
+    margin-top: 20px;
+}
+
+.star-rating {
+    display: flex;
+    align-items: center;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 25px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.star-rating input:checked ~ label,
+.star-rating input:checked ~ label:hover,
+.star-rating label:hover ~ label {
+    color: #ffdd00;
+}
