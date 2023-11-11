@@ -12,118 +12,122 @@
         margin-top: 20px;
         }
 
-#content {
-    margin-top: 20px;
-}
+        #content {
+            margin-top: 20px;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px;
-}
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
 
-ul {
-    
-}
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    position: relative;
-}
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            position: relative;
+        }
 
-nav ul li a:hover {
-    color: #ff6600;
-}
+        nav ul li a:hover {
+            color: #ff6600;
+        }
 
-nav ul li a::after {
-    content: '';
-    display: block;
-    height: 2px;
-    width: 0;
-    background-color: #ff6600;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transition: width 0.3s ease, left 0.3s ease;
-}
+        nav ul li a::after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 0;
+            background-color: #ff6600;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
 
-nav ul li a:hover::after {
-    width: 100%;
-    left: 0;
-}
+        nav ul li a:hover::after {
+            width: 100%;
+            left: 0;
+        }
 
-.menu-toggle {
-    cursor: pointer;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 2;
-}
+        .menu-toggle {
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+        }
 
-.menu-toggle .bar {
-    height: 3px;
-    width: 25px;
-    background-color: #fff;
-    margin: 6px 0;
-    transition: 0.4s;
-}
+        .menu-toggle .bar {
+            height: 3px;
+            width: 25px;
+            background-color: #fff;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
 
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #333;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    z-index: 1;
-}
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 1;
+        }
 
-.sidebar a {
-    padding: 15px 25px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #fff;
-    display: block;
-    transition: 0.3s;
-}
+        .sidebar a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
 
-.sidebar a:hover {
-    color: #ff6600;
-}
+        .sidebar a:hover {
+            color: #ff6600;
+        }
 
-.sidebar.active {
-    width: 250px;
-}
-    .card{
-        width: 25rem;
-        height: 200px;
-        margin: auto;
-    }
+        .sidebar.active {
+            width: 250px;
+        }
+
+        .card{
+            width: 25rem;
+            height: 200px;
+            margin: 10px 20px;
+            display: inline-block;
+        }
 
     .cardbody{
         position: relative;
@@ -303,7 +307,36 @@ nav ul li a:hover::after {
 
                 </p>
             </article>
-            
+            <div class="card">
+                <div class="cardbody">
+                    <div class="front">
+                        <p>Q. What is data ethics? </p>
+                    </div>
+                    <div class="back">
+                        <p>A. Data ethics refers to the practice of evaluating data collection, storage, and dissemination methods and the impact this would have on society, both positively and negatively regarding its content. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardbody">
+                    <div class="front">
+                        <p>Q. List four principled that govern data ethics  </p>
+                    </div>
+                    <div class="back">
+                        <p>A. Ownerships, Transparency, Privacy, Intention  </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardbody">
+                    <div class="front">
+                        <p>Q. It is ethical for data to be biased. True or false?  </p>
+                    </div>
+                    <div class="back">
+                        <p>A. False, it is important to steer clear of bias and discrimination when developing algorithms and making decisions otherwise they can be deemed unethical. </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
     
@@ -327,87 +360,4 @@ nav ul li a:hover::after {
     }
 </script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-    .card{
-        width: 25rem;
-        height: 200px;
-        margin: auto;
-    }
-
-    .cardbody{
-        position: relative;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        transition: transform 0.6s;
-        transform-style: preserve-3d;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19); 
-    }
-
-    .front, .back {
-        background-color: #ffffff;
-        border:solid 3px turquoise;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
-    }
-
-    .front p, .back p {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: large;
-        margin: 0;
-    }
-
-    .back{
-        transform: rotateY(180deg);
-        transition: 0.5s;
-    }
-
-    .card:hover .cardbody{
-        transform: rotateY(180deg);
-    }
-    </style>
-</head>
-
-<body>
-    <div class="card">
-        <div class="cardbody">
-            <div class="front">
-                <p>Q. What is data ethics? </p>
-            </div>
-            <div class="back">
-                <p>A. Data ethics refers to the practice of evaluating data collection, storage, and dissemination methods and the impact this would have on society, both positively and negatively regarding its content. </p>
-            </div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="cardbody">
-            <div class="front">
-                <p>Q. List four principled that govern data ethics  </p>
-            </div>
-            <div class="back">
-                <p>A. Ownerships, Transparency, Privacy, Intention  </p>
-            </div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="cardbody">
-            <div class="front">
-                <p>Q. It is ethical for data to be biased. True or false?  </p>
-            </div>
-            <div class="back">
-                <p>A. False, it is important to steer clear of bias and discrimination when developing algorithms and making decisions otherwise they can be deemed unethical. </p>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
 </html>
