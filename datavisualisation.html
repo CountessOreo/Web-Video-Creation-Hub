@@ -3,109 +3,127 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Visualisation</title>
     <link rel="stylesheet" href="styles.css">
-</head>
+  <style>
+    select {
+    font-size: 16px;
+    margin-top: 20px;
+}
 
-<body>
-    <header>
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <h1>INF</h1>
-        <nav class="sidebar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="datavisualisation.html">Data Visualisation</a></li>
-                <li><a href="qualityofinformation.html">Quality of Information</a></li>
-                <li><a href="dataethics.html">Data Ethics</a></li>
-                <li><a href="informationsystems.html">Information Systems</a></li>
-                <li><a href="integration.html">Information Systems integration</a></li>
-                <li><a href="customizing.html">Customizing Information Systems</a></li>
-                <li><a href="bibliography.html">Bibliography</a></li>
-                <li><a href="contact.html" target="_blank">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
- 
+#content {
+    margin-top: 20px;
+}
 
-        <div class="container">
-            <h1>Data Visualization</h1>
-            <p>
-                In information systems, data visualization is a graphical representation, either through charts, graphs, infographics, or animations that depict complicated data relationships.
-It is essential for converting unstructured data into insightful understandings that facilitate business decision-making by simplifying complex datasets. ​(IBM, 2023)​ 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
 
-            </p>
-        
-            <select id="topicsDropdown"></select>
-            <div id="content"></div>
-        </div>
-        <script>
-           const topics = {
-    Significance:{
-        video: "Video Significance URL",
-        text: "Understanding Complex Data: <br> By streamlining complex datasets, data visualization helps users better understand the patterns, trends, and outliers that exist in the data. <br><br>Collaboration and Communication: <br>  By presenting data in a way that is universally understood, visual representations improve communication within teams. Collaboration between departments and stakeholders is facilitated by it.<br><br> Rapid Decision-Making: <br>Decision-makers can respond quickly to shifting market conditions, consumer preferences, and internal procedures thanks to the instant insights provided by visualizations.<br><br> Identification of Trends and Patterns:<br> Data visualization tools enable users to identify trends, patterns, and correlations within datasets that might be difficult to discern through raw data alone. By visualizing data, analysts can quickly spot emerging trends, allowing businesses to adapt and capitalize on new opportunities. <br><br>Improved Data Analysis:<br> Visualization tools often come with powerful analytical capabilities. Users can apply various statistical methods, filters, and algorithms to the visualized data to gain deeper insights. This enhanced analysis helps in understanding customer behavior, market dynamics, and business performance more effectively. <br> <br>Storytelling with Data: <br>Data visualization allows professionals to tell a compelling story with data. By creating interactive and engaging visualizations, complex narratives can be simplified and conveyed to stakeholders. Visualizations can evoke emotions and help people connect with the data, making the information more memorable and impactful. <br><br>Forecasting and Predictive Analysis: <br>Data visualization, coupled with advanced analytics techniques, enables businesses to build predictive models. These models use historical data to forecast future trends, demand, and outcomes. This predictive analysis is valuable for strategic planning and optimizing resources.<br><br>Real-time Monitoring: <br>With the advent of real-time data visualization tools, businesses can monitor their operations and performance metrics in real-time. This capability is particularly useful in fields like finance, healthcare, and online services, where immediate responses to changing conditions are necessary.<br><br>Enhanced User Engagement: <br>In fields like digital marketing and social media, visually appealing charts and graphs are essential for engaging audiences. Interactive dashboards and visual reports not only convey information effectively but also enhance user engagement, leading to better customer experiences.",
-        test: "Test Significance Questions",
-       
-    },
-    Benefits: {
-        video: "Video Benefits URL",
-        text: "Text Benefits Content",
-        test: "Test Benefits Questions",
-  
-    },
-    Impact: {
-        video: "Video Impact URL",
-        text: "Text Impact Content",
-        test: "Test Impact Questions",
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #ff6600;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: #ff6600;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.menu-toggle {
    
-    },
-    Importance: {
-        video: "Video Importance URL",
-        text: "Text Importance Content",
-        test: "Test Importance Questions",
-    
-    },
-};
-
-const topicsDropdown = document.getElementById("topicsDropdown");
-const contentDiv = document.getElementById("content");
-
-
-for (const topic in topics) {
-    const option = document.createElement("option");
-    option.value = topic;
-    option.textContent = topic;
-    topicsDropdown.appendChild(option);
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
 }
 
-topicsDropdown.addEventListener("change", function () {
-    const selectedTopic = topicsDropdown.value;
-    const selectedTopicInfo = topics[selectedTopic];
-    renderTopicInfo(selectedTopicInfo);
-});
-
-function renderTopicInfo(topicInfo) {
-    const contentHTML = `
-        <h2>Video:</h2>
-        <p>${topicInfo.video}</p>
-        <h2>Text:</h2>
-        <p>${topicInfo.text}</p>
-        <h2>Test:</h2>
-        <p>${topicInfo.test}</p>
-
-    `;
-    contentDiv.innerHTML = contentHTML;
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
 }
 
-        </script>
-   <style>
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 1;
+}
+
+.sidebar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #ff6600;
+}
+
+.sidebar.active {
+    width: 250px;
+}
     .card{
         width: 25rem;
         height: 200px;
@@ -147,26 +165,117 @@ function renderTopicInfo(topicInfo) {
     .card:hover .cardbody{
         transform: rotateY(180deg);
     }
-    </style>
-</head>
 
+    .topics-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .topic {
+      flex: 1;
+      cursor: pointer;
+      padding: 10px;
+      background-color: #f1f1f1;
+      border: 1px solid #ddd;
+      margin: 5px;
+    }
+
+    .subtopic {
+      display: none;
+      padding: 10px;
+      border-top: 1px solid #ddd;
+      width: 100%;
+    }
+    </style>
+
+  
+</head>
 <body>
-    <div class="card">
-        <div class="cardbody">
-            <div class="front">
-                <p>Lorem ipsum dolor sit amet.</p>
+        <header>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
-            <div class="back">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid quas odio id d impedit non quis, error blanditiis facere qui dolor enim quos tempora quibusdam omnis.</p>
-            </div>
-        </div>
-    </div>
+            <h1>INF</h1>
+            <nav class="sidebar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="datavisualisation.html">Data Visualisation</a></li>
+                    <li><a href="qualityofinformation.html">Quality of Information</a></li>
+                    <li><a href="dataethics.html">Data Ethics</a></li>
+                    <li><a href="informationsystems.html">Information Systems</a></li>
+                    <li><a href="integration.html">Information Systems integration</a></li>
+                    <li><a href="customizing.html">Customizing Information Systems</a></li>
+                    <li><a href="bibliography.html">Bibliography</a></li>
+                    <li><a href="contact.html" target="_blank">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+   
+        <div class="topics-container">
+            <div class="topic" onclick="toggleContent('mainTopic')">Data Visualisation</div>
+          </div>
+          
+          <div class="subtopic" id="mainTopic">
+            <div class="topic" onclick="toggleContent('subtopic1')">2.1 Introduction</div>
+            <div class="topic" onclick="toggleContent('subtopic2')">2.2 Significance</div>
+            <div class="topic" onclick="toggleContent('subtopic3')">2.3 Benefits</div>
+            <div class="topic" onclick="toggleContent('subtopic4')">2.4 Impact</div>
+            <div class="topic" onclick="toggleContent('subtopic5')">2.5 Importance</div>
+          </div>
+          
+          <div class="subtopic" id="subtopic1">
+            <p>Introduction</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/cuyQE0bmbW8?si=s30mb_5nfSxvTyfZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h3>Transcript</h3>
+          </div>
+
+          <div class="subtopic" id="subtopic2">
+            <p>2.2</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/kAN1uCux8mE?si=kKXlxzRVqisLsUJM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>\
+            <h3>Transcript</h3>
+          </div>
+          
+          <div class="subtopic" id="subtopic3">
+            <p>2.3</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/AmM4QVZ-4-I?si=sexJgcth57vkLkKo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h3>Transcript</h3>
+          </div>
+          
+          <div class="subtopic" id="subtopic4">
+            <p>2.4</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8L8e4v7h-IQ?si=MWBVUfJX5e5c21Z4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h3>Transcript</h3>
+          </div>
+
+          <div class="subtopic" id="subtopic5">
+            <p>2.5</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/BwoWSm5r7JA?si=5y0h4KRPoDxb6bYf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h3>Transcript</h3>
+          </div>
+          
+  
+
 </body>
 <script>
-    function toggleMenu() {
-        document.querySelector('.sidebar').classList.toggle('active');
-    }
-</script>
-</body>
+   function toggleMenu() {
+    var sidebar = document.querySelector('.sidebar');
+    var content = document.querySelector('.content');
 
+    sidebar.classList.toggle('active');
+    content.classList.toggle('active');
+  }
+
+  function toggleContent(topicId) {
+    var allSubtopics = document.querySelectorAll('.subtopic');
+    allSubtopics.forEach(function(subtopic) {
+      subtopic.style.display = 'none';
+    });
+
+    var subtopic = document.getElementById(topicId);
+    subtopic.style.display = (subtopic.style.display === "none") ? "block" : "none";
+  }
+</script>
 </html>
