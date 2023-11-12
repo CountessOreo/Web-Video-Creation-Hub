@@ -142,7 +142,7 @@
     
         .front, .back {
             background-color: #ffffff;
-            border:solid 3px turquoise;
+            border:solid #19839f;
             position: absolute;
             width: 100%;
             height: 100%;
@@ -214,7 +214,8 @@
         }
     
         .listitems{
-            margin-left: 1%;
+            margin-left: 2%;
+            font-size: 18px;
         }
     
         body {
@@ -255,10 +256,15 @@
             padding-top: 60px;
             z-index: 1;
         }
-       
+
+        .uncentering p{
+            font-size: 18px;
+            margin-left: 1%;
+        }
+    
         </style>
 
-  
+
 </head>
 <body>
         <header>
@@ -288,74 +294,86 @@
                 </ul>
             </nav>
         </header>
-   
+
         <div class="topics-container">
             <div class="topic" onclick="toggleContent('mainTopic')">▼ Information System Customization</div>
-          </div>
-          
-          <div class="introduction" id="introduction">
+        </div>
+        
+        <div class="introduction" id="introduction">
             <p>Information System Customization involves tailoring and adapting information systems to meet the specific needs and requirements of an organization. Rather than using off-the-shelf solutions that may not perfectly align with the unique processes and workflows of a business, customization allows for the modification, configuration, and development of information systems to ensure optimal functionality and efficiency. This tailored approach can enhance user satisfaction, improve productivity, and align technology solutions with the strategic goals of the organization.</p>
-          </div>
+        </div>
 
-          <div class="subtopic" id="mainTopic">
+        <div class="subtopic" id="mainTopic">
             <div class="topic" onclick="toggleContent('subtopic1')">Overview</div>
             
-          </div>
-          
-          <div class="subtopic" id="subtopic1">
+        </div>
+        
+        <div class="subtopic" id="subtopic1">
             <h1>Video Presentation</h1>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/atoffer6kh8?si=4Q9gwV20TMm4sfto" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <h2><u>Transcript</u></h2>
-            <h3>Customizing Information Systems</h3>
-            <p>
-                Here is a step-by-step guide on how to customize an existing information system for a future business’ needs:<br><br>
-            </p>
-            <h5>Step 1:	Identify Business Needs</h5>
-            <p>
-                Determine your business’ specific requirements needed from the system to improve the overall work environment, either catering to the employees or the customers. This might be everything from bettering customer service to simplifying processes and enhancing efficiency.
-            </p>
-            <h5>Step 2:	Define System Requirements</h5>
-            <p>
-                Following the identification of your business requirements, the next step is to describe the system requirements. This encompasses the system’s functionality, the data it must manage, and the performance requirements it must achieve.
-            </p><h5>Step 3:	Evaluate Existing Systems</h5>
-            <p>
-                Examine your current information systems to determine whether they may be modified to meet your new needs. If your present system is obsolete or lacking in functionality, it would be wise for you to consider replacing it. The usage of old technology, such as hardware, software, or both, is one sign that an information system is approaching obsolescence. Additionally, the system’s inability to interact with other systems or technologies is considered another sign of obsolescence. An older information system may function slower or less efficiently.
-            </p><h5>Step 4:	Customize System</h5>
-            <p>
-                If your current system can be adjusted, collaborate with IT professionals either within your own business or with outside sources, to make necessary adjustments that fall in line with the already established requirements. This process might include the programming of new features or the integration of new applications. 
-            </p>
-            <h5>Step 5:	Test System</h5>
-            <p>
-                After the system has been customized, it must be tested to confirm it satisfies your business’ requirements and functions in the manner it was designed for. Simulations or pilot projects might be utilized to accomplish this. 
-                <ul>
-                    <li>•	Pilot Project – also known as a pilot study, is a scaled-down version of a larger project that assesses the feasibility of carrying it out on a larger scale; can assist project managers and stakeholders in deciding if a fresh, untested project concept is likely to succeed before going in headfirst.</li>
+            <iframe width="880" height="495" src="https://www.youtube.com/embed/atoffer6kh8?si=4Q9gwV20TMm4sfto" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="uncentering">
+                <h2><u>Transcript</u></h2><br>
+                <h3>Customizing Information Systems</h3>
+                <p>
+                    Here is a step-by-step guide on how to customize an existing information system for a future business’ needs:<br><br>
+                </p>
+                <h3>Step 1:	Identify Business Needs</h3>
+                <p>
+                    Determine your business’ specific requirements needed from the system to improve the overall work environment, either catering to the employees or the customers. This might be everything from bettering customer service to simplifying processes and enhancing efficiency.
+                </p>
+                <h3>Step 2:	Define System Requirements</h3>
+                <p>
+                    Following the identification of your business requirements, the next step is to describe the system requirements. This encompasses the system’s functionality, the data it must manage, and the performance requirements it must achieve.
+                </p>
+                <h3>Step 3:	Evaluate Existing Systems</h3>
+                <p>
+                    Examine your current information systems to determine whether they may be modified to meet your new needs. If your present system is obsolete or lacking in functionality, it would be wise for you to consider replacing it. The usage of old technology, such as hardware, software, or both, is one sign that an information system is approaching obsolescence. Additionally, the system’s inability to interact with other systems or technologies is considered another sign of obsolescence. An older information system may function slower or less efficiently.
+                </p>
+                <h3>Step 4:	Customize System</h3>
+                <p>
+                    If your current system can be adjusted, collaborate with IT professionals either within your own business or with outside sources, to make necessary adjustments that fall in line with the already established requirements. This process might include the programming of new features or the integration of new applications. 
+                </p>
+                <h3>Step 5:	Test System</h3>
+                <p>
+                    After the system has been customized, it must be tested to confirm it satisfies your business’ requirements and functions in the manner it was designed for. Simulations or pilot projects might be utilized to accomplish this. 
+                    <ul class="listitems">
+                        <li style="list-style: disc;">Pilot Project – also known as a pilot study, is a scaled-down version of a larger project that assesses the feasibility of carrying it out on a larger scale; can assist project managers and stakeholders in deciding if a fresh, untested project concept is likely to succeed before going in headfirst.</li>
+                    </ul>
+                </p>
+                <h3>Step 6:	Train Staff</h3>
+                <p>
+                    Train your workers on how to utilize the system after it has been tested and authorized. This will assist in guaranteeing that they can use the new system efficiently to suit your business’s needs. There are a few ways in which you can train new employees to use the new system, such as:
+                </p>
+                <ul class="listitems">
+                    <li style="list-style: disc;">Prioritize training to increase buy-in: One of the most common mistakes businesses make when adopting new systems is expecting already overworked staff to find time in their schedules to add training.</li>
+                    <li style="list-style: disc;">Employ training incentives to encourage staff to utilize the new system: Employees might be motivated to learn and adapt to the new system by offering incentives.</li>
+                    <li style="list-style: disc;">Provide customized learning modules: Employees can benefit from customized learning courses to better grasp how the new system pertains to their unique roles.</li>
+                    <li style="list-style: disc;">Include real-time monitoring and feedback: This helps employees to learn from their errors and improve their utilization of the system.</li>
                 </ul>
-            </p>
-            <h5>Step 6:	Train Staff</h5>
-            <p>
-                Train your workers on how to utilize the system after it has been tested and authorized. This will assist in guaranteeing that they can use the new system efficiently to suit your business’s needs. There are a few ways in which you can train new employees to use the new system, such as:
-            </p>
-            <ul>
-                <li>•	Prioritize training to increase buy-in: One of the most common mistakes businesses make when adopting new systems is expecting already overworked staff to find time in their schedules to add training.</li>
-                <li>•	Employ training incentives to encourage staff to utilize the new system: Employees might be motivated to learn and adapt to the new system by offering incentives.</li>
-                <li>•	Provide customized learning modules: Employees can benefit from customized learning courses to better grasp how the new system pertains to their unique roles.</li>
-                <li>•	Include real-time monitoring and feedback: This helps employees to learn from their errors and improve their utilization of the system.</li>
-            </ul>
-            <h5>Step 7:	Monitor and Update the System</h5>
-            <p>
-                Finally, it is crucial to monitor the system and make modifications where necessary. This will ensure that the system will continue to suit the demands of your organization as they change in the future.
-            </p>
+                <h3>Step 7:	Monitor and Update the System</h3>
+                <p>
+                    Finally, it is crucial to monitor the system and make modifications where necessary. This will ensure that the system will continue to suit the demands of your organization as they change in the future.
+                </p>
 
-            <p>
-                Although there are benefits to customizing an already established information system, it’s important to identify the potential dangers of doing so. These dangers include: 
-            </p>
-            <ul>
-                <li>•	Cost Increases: Customization can result in cost increases, both in terms of original development and continuing maintenance. Also costs for extra hardware, software, and people’s training could be included.</li>
-                <li>•	Dependence on Vendors or Developers: There is a danger of being excessively reliant on the vendors or developers who did the customization. It may be difficult to maintain or alter the system if they are unavailable or go out of business.</li>
-                <li>•	Security Risks: Customizations may introduce new security vulnerabilities into the system, particularly if they are not thoroughly tested and verified.</li>
-                <li>•	Complexity: Excessive customization can contribute to unneeded complexity, making the system more difficult to use and administer.</li>
-                <li>•	Business Process Changes: Businesses must sometimes change their procedures to meet the customized system, which might cause employee resistance and diminish productivity.</li>
-            </ul>
+                <p>
+                    Although there are benefits to customizing an already established information system, it’s important to identify the potential dangers of doing so. These dangers include: 
+                </p>
+                <ul class="listitems">
+                    <li style="list-style: disc;">Cost Increases: Customization can result in cost increases, both in terms of original development and continuing maintenance. Also costs for extra hardware, software, and people’s training could be included.</li>
+                    <li style="list-style: disc;">Dependence on Vendors or Developers: There is a danger of being excessively reliant on the vendors or developers who did the customization. It may be difficult to maintain or alter the system if they are unavailable or go out of business.</li>
+                    <li style="list-style: disc;">Security Risks: Customizations may introduce new security vulnerabilities into the system, particularly if they are not thoroughly tested and verified.</li>
+                    <li style="list-style: disc;">Complexity: Excessive customization can contribute to unneeded complexity, making the system more difficult to use and administer.</li>
+                    <li style="list-style: disc;">Business Process Changes: Businesses must sometimes change their procedures to meet the customized system, which might cause employee resistance and diminish productivity.</li>
+                </ul>
+            </div>
+
+            <br><hr>
+            
+            <img style="margin: 2%;" src="./Pictures/customization/customization-250x250.png" height="300em">
+            <img style="margin: 2%;" src="./Pictures/customization/customize-software.jpg" height="300em">
+            <img style="margin: 2%;" src="./Pictures/customization/Information-Systems2.jpg" height="300em">   
+
+            <hr><br>
 
             <div class="card">
                 <div class="cardbody">
@@ -387,14 +405,7 @@
                     </div>
                 </div>
             </div>
-            <img src="./Pictures/customization/Customization-1-1.png" height="300em">    
-            <img src="./Pictures/customization/customization-250x250.png" height="300em">    
-            <img src="./Pictures/customization/customization-300x200.png" height="300em">    
-            <img src="./Pictures/customization/customize-software.jpg" height="300em">    
-            <img src="./Pictures/customization/icon-5.png" height="300em">    
-            <img src="./Pictures/customization/Information-Systems2.jpg" height="300em">    
         </div>
-    </div>
 </body>
 <script>
     function toggleMenu() {
