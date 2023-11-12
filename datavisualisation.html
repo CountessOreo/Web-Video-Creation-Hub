@@ -9,7 +9,7 @@
     <title>Data Visualisation</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="./Pictures/favicon.ico">
-  <style>
+    <style>
     select {
     font-size: 16px;
     margin-top: 20px;
@@ -196,7 +196,7 @@
     margin: 5px;
     }
 
-    #subtopic1{
+    #subtopic1, #subtopic2, #subtopic3{
         text-align: center;
     }
 
@@ -257,6 +257,11 @@
         padding-top: 60px;
         z-index: 1;
     }
+
+    .marginfix{
+        margin-left: 1%;
+        font-size: 18px;
+    }
     
     </style>
 
@@ -290,97 +295,106 @@
                 </ul>
             </nav>
         </header>
-   
+
         <div class="topics-container">
             <div class="topic" onclick="toggleContent('mainTopic')">▼ Data Visualisation</div>
         </div>
-          
-          <div class="introduction" id="introduction">
+        
+        <div class="introduction" id="introduction">
             <p>
                 Data visualization is the graphical representation of information and data. Its primary goal is to communicate complex data in an understandable and visually appealing way. Through the use of charts, graphs, maps, and other visual elements, data visualization enables individuals to grasp patterns, trends, and insights that may be challenging to discern from raw data.
             </p>
-          </div>
-          
+        </div>
         
-          <div class="subtopic" id="mainTopic">
+        
+        <div class="subtopic" id="mainTopic">
             <div class="topic" onclick="toggleContent('subtopic1')">2.1 Introduction</div>
             <div class="topic" onclick="toggleContent('subtopic2')">2.2 Significance</div>
             <div class="topic" onclick="toggleContent('subtopic3')">2.3 Benefits</div>
             <div class="topic" onclick="toggleContent('subtopic4')">2.4 Impact</div>
             <div class="topic" onclick="toggleContent('subtopic5')">2.5 Importance</div>
-          </div>
-          
-          <div class="subtopic" id="subtopic1">
+        </div>
+        
+        <div class="subtopic" id="subtopic1">
             <h1>Video Presentation</h1>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/cuyQE0bmbW8?si=s30mb_5nfSxvTyfZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <h2><u>Transcript</u></h2>
-            <p>Data Visualization, in Information Systems, is a graphical representation either through charts, graphs, infographics, or animations that depict complicated data relationships. It is essential for converting unstructured data into insightful understanding, facilitating business decision-making by simplifying complex data sets.</p>
+            <iframe width="880" height="495" src="https://www.youtube.com/embed/cuyQE0bmbW8?si=s30mb_5nfSxvTyfZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="uncentering">
+                <h2><u>Transcript</u></h2>
+                <p class="marginfix">
+                    Data Visualization, in Information Systems, is a graphical representation either through charts, graphs, infographics, or animations that depict complicated data relationships. It is essential for converting unstructured data into insightful understanding, facilitating business decision-making by simplifying complex data sets.
+                </p>
+            </div>
+            
             <img src="./Pictures/2.1/1.png" height="300em">
             <img src="./Pictures/2.1/2.jpg" height="300em">
-          </div>
+        </div>
 
-          <div class="subtopic" id="subtopic2">
+        <div class="subtopic" id="subtopic2">
             <h1>Video Presentation</h1>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/kAN1uCux8mE?si=kKXlxzRVqisLsUJM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <h2><u>Transcript</u></h2>
-            <h3>The significance of data visualization.</h3>
+            <iframe width="880" height="495" src="https://www.youtube.com/embed/kAN1uCux8mE?si=kKXlxzRVqisLsUJM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="uncentering">
+                <h2><u>Transcript</u></h2><br>
+                <h3>The significance of data visualization.</h3>
 
-            <p><strong>Understanding complex data:</strong> By streamlining complex data sets, data visualization helps users better understand the patterns, trends, and outliers that exist in the data set.</p>
+                <p class="marginfix"><strong>Understanding complex data:</strong> By streamlining complex data sets, data visualization helps users better understand the patterns, trends, and outliers that exist in the data set.</p>
 
-            <p><strong>Collaboration and communication:</strong> By presenting the data in a way that is universally understood, visual representations improve communication within teams. Collaboration between departments and stakeholders is facilitated by it.</p>
+                <p class="marginfix"><strong>Collaboration and communication:</strong> By presenting the data in a way that is universally understood, visual representations improve communication within teams. Collaboration between departments and stakeholders is facilitated by it.</p>
 
-            <p><strong>Rapid Decision-Making:</strong> Decision-makers can respond quickly to shifting market conditions, consumer preferences, and internal procedures thanks to the instant insights provided by visualizations.</p>
+                <p class="marginfix"><strong>Rapid Decision-Making:</strong> Decision-makers can respond quickly to shifting market conditions, consumer preferences, and internal procedures thanks to the instant insights provided by visualizations.</p>
 
-            <p><strong>Identification of Trends and Patterns:</strong> Data visualization tools enable users to identify trends, patterns, and correlations within data sets that might be difficult to discern through raw data alone. By visualizing data, analysts can quickly spot emerging trends allowing businesses to adapt and capitalize on new opportunities.</p>
+                <p class="marginfix"><strong>Identification of Trends and Patterns:</strong> Data visualization tools enable users to identify trends, patterns, and correlations within data sets that might be difficult to discern through raw data alone. By visualizing data, analysts can quickly spot emerging trends allowing businesses to adapt and capitalize on new opportunities.</p>
 
-            <p><strong>Improved data analysis:</strong> Visualization tools often come with powerful analytical capabilities; users can apply various statistical methods, filters, and algorithms to visualize data, which can help them gain deeper insights. This enhanced analysis helps in understanding customer behavior, market dynamics, and business performance more effectively.</p>
+                <p class="marginfix"><strong>Improved data analysis:</strong> Visualization tools often come with powerful analytical capabilities; users can apply various statistical methods, filters, and algorithms to visualize data, which can help them gain deeper insights. This enhanced analysis helps in understanding customer behavior, market dynamics, and business performance more effectively.</p>
 
-            <p><strong>Storytelling with data:</strong> Data visualization allows professionals to tell a compelling story with data. By creating interactive and engaging visualizations, complex narratives can be simplified and conveyed to stakeholders. Visualizations can evoke emotions and help people connect with the data, making the information more memorable and impactful.</p>
+                <p class="marginfix"><strong>Storytelling with data:</strong> Data visualization allows professionals to tell a compelling story with data. By creating interactive and engaging visualizations, complex narratives can be simplified and conveyed to stakeholders. Visualizations can evoke emotions and help people connect with the data, making the information more memorable and impactful.</p>
 
-            <p><strong>Forecasting and predictive analysis:</strong> Data visualization, coupled with advanced analytic techniques, enables businesses to build predictive models. These models use historical data to forecast future trends, demands, and outcomes. This predictive analysis is valuable for strategic planning and optimizing resources.</p>
+                <p class="marginfix"><strong>Forecasting and predictive analysis:</strong> Data visualization, coupled with advanced analytic techniques, enables businesses to build predictive models. These models use historical data to forecast future trends, demands, and outcomes. This predictive analysis is valuable for strategic planning and optimizing resources.</p>
 
-            <p><strong>Real-time monitoring:</strong> With the advent of real-time data visualization tools, businesses can monitor their operations and performance metrics in real-time. This capability is particularly useful in fields like finance, healthcare, and online services, where immediate responses to changing conditions are necessary.</p>
+                <p class="marginfix"><strong>Real-time monitoring:</strong> With the advent of real-time data visualization tools, businesses can monitor their operations and performance metrics in real-time. This capability is particularly useful in fields like finance, healthcare, and online services, where immediate responses to changing conditions are necessary.</p>
 
-            <p><strong>Enhanced user engagement:</strong> In fields like digital marketing and social media, visually appealing charts and graphs are essential for engaging audiences. Interactive dashboards and visual reports not only convey information effectively but also enhance user engagement, leading to better customer experiences.</p>
-            <img src="./Pictures/2.2/1.png" height="300em">
+                <p class="marginfix"><strong>Enhanced user engagement:</strong> In fields like digital marketing and social media, visually appealing charts and graphs are essential for engaging audiences. Interactive dashboards and visual reports not only convey information effectively but also enhance user engagement, leading to better customer experiences.</p>
+            </div>
+            
+            <img style="margin: 2%;" src="./Pictures/2.2/1.png" height="300em">
             <img src="./Pictures/2.2/2.png" height="300em">
             <img src="./Pictures/2.2/3.jpeg" height="300em">
             <img src="./Pictures/2.2/4.jpg" height="300em">
             <img src="./Pictures/2.2/6.jpg" height="300em">
-           
+        
+            <br>
 
-    <div class="card">
-        <div class="cardbody">
-            <div class="front">
-                <p>Q. What is data visualization? </p>
+            <div class="card">
+                <div class="cardbody">
+                    <div class="front">
+                        <p>Q. What is data visualization? </p>
+                    </div>
+                    <div class="back">
+                        <p>A. A graphical representation, either through charts, graphs, infographics, or animations that depict complicated data relationships.   </p>
+                    </div>
+                </div>
             </div>
-            <div class="back">
-                <p>A. A graphical representation, either through charts, graphs, infographics, or animations that depict complicated data relationships.   </p>
-            </div>
-        </div>
-    </div>
 
-    <div class="card">
-        <div class="cardbody">
-            <div class="front">
-                <p>Q. What is one of the advantages of data visualization in identifying trends and patterns? </p>
+            <div class="card">
+                <div class="cardbody">
+                    <div class="front">
+                        <p>Q. What is one of the advantages of data visualization in identifying trends and patterns? </p>
+                    </div>
+                    <div class="back">
+                        <p>A. Data visualization tools enable users to quickly spot emerging trends and patterns within data sets that might be challenging to discern through raw data alone.   </p>
+                    </div>
+                </div>
             </div>
-            <div class="back">
-                <p>A. Data visualization tools enable users to quickly spot emerging trends and patterns within data sets that might be challenging to discern through raw data alone.   </p>
-            </div>
-        </div>
-    </div>
 
-    <div class="card">
-        <div class="cardbody">
-            <div class="front">
-                <p>Q. How does data visualization contribute to improved data analysis? </p>
+            <div class="card">
+                <div class="cardbody">
+                    <div class="front">
+                        <p>Q. How does data visualization contribute to improved data analysis? </p>
+                    </div>
+                    <div class="back">
+                        <p>A. Visualization tools often come with powerful analytical capabilities, allowing users to apply various statistical methods, filters, and algorithms to gain deeper insights into customer behavior, market dynamics, and business performance.  </p>
+                    </div>
+                </div>
             </div>
-            <div class="back">
-                <p>A. Visualization tools often come with powerful analytical capabilities, allowing users to apply various statistical methods, filters, and algorithms to gain deeper insights into customer behavior, market dynamics, and business performance.  </p>
-            </div>
-        </div>
-    </div>
         </div>
 
          
