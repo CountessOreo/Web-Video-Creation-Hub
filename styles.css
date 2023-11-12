@@ -197,3 +197,32 @@ header {
     z-index: 1;
 }
 
+#videopresentation{
+    text-align: center;
+}
+
+#imagerectification{
+    text-align: center;
+}
+
+.introimages1{
+    margin: 2%;
+}
+
+.introimages2{
+    margin: 0% 2%;
+}
+
+#introimages3{
+    margin: 2% 0%;
+}
+
+.fontsize{
+    font-size: 19px;
+    margin-left: 1%;
+}
+
+h3{
+    text-decoration: underline;
+}
+
