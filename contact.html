@@ -262,6 +262,26 @@ nav ul li a:hover::after {
         padding-top: 60px;
         z-index: 1;
     }
+
+    .login-box, .comment-form
+    {
+        color: red !important;
+        font-size: larger;
+        margin: 10px, 20px;
+    }
+
+    input, .login-links a, button{
+        color: red !important;
+        font-size: large;
+    }
+    
+    iframe{
+        margin: 20px;
+    }
+
+    img{
+        display: inline-block;
+    }
    </style>
     
     <body>
@@ -271,7 +291,6 @@ nav ul li a:hover::after {
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
-            <h1>INF</h1>
             <nav class="sidebar">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -287,9 +306,9 @@ nav ul li a:hover::after {
             </nav>
 </head>
 <body>
-    <h1>Form</h1>
+    <h1>Form</h1><h2>Reach Out</h2>
     <div class="login-box">
-        <h2>Reach Out</h2>
+        
         <br>
         <form class="contactform" method="post" action="#">
         
@@ -348,9 +367,9 @@ nav ul li a:hover::after {
             <strong>Mr Sir</strong>
             <p>This is the best site I have ever seen, I learnt so much. This group is getting 100%. Rating: &#9733;&#9733;&#9733;&#9733;&#9733;</p>
         </div>
-    
+        <h3>Add a Comment</h3>
         <div class="comment-form">
-            <h3>Add a Comment</h3>
+            
             <form id="new-comment-form">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
